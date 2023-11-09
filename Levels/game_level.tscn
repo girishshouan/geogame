@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvk1fqyhpnlqg"]
+
+[ext_resource type="Texture2D" uid="uid://qoao3x2csyew" path="res://Art/detective.png" id="1_2wx7g"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Detective" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Detective"]
+position = Vector2(0, -1)
+scale = Vector2(1, 1.03448)
+texture = ExtResource("1_2wx7g")
+hframes = 8
+vframes = 6
