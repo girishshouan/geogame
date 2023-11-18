@@ -1,0 +1,21 @@
+~ start
+Player - This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?
+- Naruto
+	Player - I don't think that's quite right.
+	=> END
+- One Piece
+	Player - The room just turned a bit brighter. I think that's the correct answer.
+	set global.answered_question = true
+	=> END
+- Attack on Titan
+	Player - I don't think that's quite right.
+	=> END
+- Inuyasha
+	Player - I don't think that's quite right.
+	=> END
+- Astro Boy
+	Player - I don't think that's quite right.
+	=> END
+
+~ locked
+Player - The door is locked!
