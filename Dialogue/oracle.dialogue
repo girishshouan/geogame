@@ -1,0 +1,11 @@
+~ oracle_dialogue_start
+Alysanne: Greetings. Do you require any assistance?
+- Yes
+	Alysanne: Very well.
+	if global.tries == 1:
+		Alysanne: The most popular Japanese manga is related to pirates.
+	if global.tries == 2:
+		Alysanne: The most popular Japanese manga is named after the biggest in-universe treasure.
+- No
+	Alysanne: Godspeed.
+=> END

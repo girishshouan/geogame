@@ -1,0 +1,30 @@
+~ start
+Player - This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.tries}}. Attempts allowed - 2
+- Naruto
+	Player - I don't think that's quite right.
+	set global.tries = global.tries + 1
+	=> END
+- One Piece
+	Player - The room just turned a bit brighter. I think that's the correct answer.
+	set global.answered_question = true
+	=> END
+- Attack on Titan
+	Player - I don't think that's quite right.
+	set global.tries = global.tries + 1
+	=> END
+- Inuyasha
+	Player - I don't think that's quite right.
+	set global.tries = global.tries + 1
+	=> END
+- Astro Boy
+	Player - I don't think that's quite right.
+	set global.tries = global.tries + 1
+	=> END
+
+~ locked
+Player - The door is locked!
+
+~ over
+Player - What's happening?
+Strange voice - You have lost.
+=> END
