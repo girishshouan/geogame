@@ -11,7 +11,6 @@ func _on_button_pressed():
 		
 
 func _process(_delta):
-	#pause_menu.hide()
 	if Input.is_action_just_pressed("Pause"):
 		pauseMenu()
 		
