@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbc0ytt7mrak4"]
+
+[ext_resource type="Texture2D" uid="uid://dmvvl323sfblr" path="res://Art/ishikawa-goemon.jpg" id="1_606ww"]
+[ext_resource type="Script" path="res://Levels/puzzle-tile.gd" id="1_jwwoe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwwxe"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.0117647, 0, 0.811765)
+border_blend = true
+
+[node name="puzzle-tile" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwwoe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(27, 39)
+scale = Vector2(0.344, 0.344)
+texture = ExtResource("1_606ww")
+hframes = 4
+vframes = 4
+
+[node name="Number" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 53.0
+offset_bottom = 78.0
+
+[node name="ColorRect" type="ColorRect" parent="Number"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.529412)
+
+[node name="Label" type="Label" parent="Number"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Border" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 78.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwwxe")
