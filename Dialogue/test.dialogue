@@ -1,8 +1,11 @@
 ~ start
-Player - This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.tries}}. Attempts allowed - 3
+if global.shelf_tries == 3:
+	set global.has_lost = true
+	=> over
+Player - This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
 - Naruto
 	Player - I don't think that's quite right.
-	set global.tries = global.tries + 1
+	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 - One Piece
 	Player - The room just turned a bit brighter. I think that's the correct answer.
@@ -10,27 +13,37 @@ Player - This book shelf appears peculiar. It's full of popular manga, which are
 	=> END
 - Attack on Titan
 	Player - I don't think that's quite right.
-	set global.tries = global.tries + 1
+	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 - Inuyasha
 	Player - I don't think that's quite right.
-	set global.tries = global.tries + 1
+	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 - Astro Boy
 	Player - I don't think that's quite right.
-	set global.tries = global.tries + 1
+	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 
 ~ board
+if global.board_tries == 3:
+	set global.has_lost = true
+	=> over
 Player - There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
 - Tokyo
+	Player - I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
 - Akihabara
+	Player - I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
 - Osaka
+	Player - I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
 - Kyoto
+	Player - I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
 - Sapporo
 	Player - I think that's the correct answer.
 	set global.answered_question_board = true
-- Sendai
 => END
 
 ~ locked
@@ -40,6 +53,34 @@ Player - The door is locked!
 This is a Cherry Blossom tree or a Sakura tree. It holds a profound cultural significance in Japanese culture. The annual blooming of sakura marks the arrival of spring, a time of renewal and new beginnings. The ephemeral nature of sakura also serves as a metaphor for the transient yet exquisite essence of life, influencing art, literature, and philosophy in Japanese culture.
 It's truly exquisite.
 
+=> END
+
+~ picture
+Player - This looks like an interesting picture. Do you want to look at it in detail?
+- Yes
+	set global.view_picture = true
+- No
+=> END
+
+~ ishikawa
+if global.picture_tries == 3:
+	set global.has_lost = true
+	=> over
+This picture depicts a legendary Japanese historical figure, who is often associated with daring exploits and depicted as a thief and skilled hero.\n
+Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attempts allowed - 3
+- Miyamoto Musashi
+	set global.picture_tries = global.picture_tries + 1
+	Player - I don't think that's quite right
+- Ishikawa Goemon
+	set global.answered_question_picture = true
+	set global.picture_tries = global.picture_tries + 1
+	This is the correct answer!
+- Oda Nobunaga
+	set global.picture_tries = global.picture_tries + 1
+	Player - I don't think that's quite right
+- Tokugawa Ieyasu
+	set global.picture_tries = global.picture_tries + 1
+	Player - I don't think that's quite right.
 => END
 
 ~ over
