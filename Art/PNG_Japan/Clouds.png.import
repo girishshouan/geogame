@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj4fcoo60d20q"
-path="res://.godot/imported/tree.png-e1ba68e8cd68cdbd8bf040bd9214b4b6.ctex"
+uid="uid://cyke3gyo6kgth"
+path="res://.godot/imported/Clouds.png-db4cc453215a7fe187a383aa31b84d88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/tree.png"
-dest_files=["res://.godot/imported/tree.png-e1ba68e8cd68cdbd8bf040bd9214b4b6.ctex"]
+source_file="res://Art/PNG_Japan/Clouds.png"
+dest_files=["res://.godot/imported/Clouds.png-db4cc453215a7fe187a383aa31b84d88.ctex"]
 
 [params]
 
