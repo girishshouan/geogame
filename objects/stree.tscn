@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://doj5bl0fy80b3"]
+
+[ext_resource type="Texture2D" uid="uid://dlfo7rlw30sik" path="res://Art/stree-removebg-preview.png" id="1_unrks"]
+
+[node name="Stree" type="Sprite2D"]
+position = Vector2(652, 23)
+texture = ExtResource("1_unrks")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b88chyqq8bvey"
-path="res://.godot/imported/sakura-tree.png-a3dd772bf4c3ec741eb09fdfc57dd2ef.ctex"
+uid="uid://doqxcyo52xgir"
+path="res://.godot/imported/Arc.png-9b67e3fe1f8041f29b613a6839ab18c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/sakura-tree.png"
-dest_files=["res://.godot/imported/sakura-tree.png-a3dd772bf4c3ec741eb09fdfc57dd2ef.ctex"]
+source_file="res://Art/PNG_Japan/Arc.png"
+dest_files=["res://.godot/imported/Arc.png-9b67e3fe1f8041f29b613a6839ab18c9.ctex"]
 
 [params]
 

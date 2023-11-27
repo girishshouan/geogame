@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qoao3x2csyew" path="res://Art/detective.png" id="1_kie74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwhgr"]
-size = Vector2(14, 40)
+size = Vector2(14, 18)
 
 [sub_resource type="Animation" id="Animation_rwl3q"]
 length = 0.001
@@ -362,7 +362,7 @@ vframes = 6
 frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_kwhgr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
