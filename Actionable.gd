@@ -10,9 +10,16 @@ func action() -> void:
 	#var balloon : Node = Balloon.instantiate()
 	#get_tree().current_scene.add_child(balloon)
 	#balloon.start(dialogue_resource, dialogue_start)
-	if global.tries < 3:
+	'''
+	if global.has_lost != true:
 		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
 	else:
 		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_over)
+		await get_tree().create_timer(5.5).timeout
+		get_tree().quit()
+	'''
+	log(global.has_lost)
+	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	if global.has_lost == true:
 		await get_tree().create_timer(5.5).timeout
 		get_tree().quit()
