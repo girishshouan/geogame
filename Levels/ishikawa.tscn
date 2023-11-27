@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://eacljp0eiyt4"]
+
+[ext_resource type="Script" path="res://Levels/ishikawa.gd" id="1_f1v2g"]
+[ext_resource type="Texture2D" uid="uid://dmvvl323sfblr" path="res://Art/ishikawa-goemon.jpg" id="2_0nmpl"]
+
+[node name="ishikawa" type="Node2D"]
+script = ExtResource("1_f1v2g")
+
+[node name="Ishikawa-goemon" type="Sprite2D" parent="."]
+position = Vector2(398.75, 331)
+scale = Vector2(1.3928, 0.871111)
+texture = ExtResource("2_0nmpl")
+
+[node name="backButton" type="Button" parent="."]
+offset_left = 65.0
+offset_top = 15.0
+offset_right = 136.0
+offset_bottom = 46.0
+text = "Go Back"
+
+[node name="oracleButton" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 62.0
+offset_right = 174.0
+offset_bottom = 93.0
+text = "Consult Oracle"
+
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="oracleButton" to="." method="_on_oracle_button_pressed"]
