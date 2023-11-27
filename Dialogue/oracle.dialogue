@@ -22,6 +22,21 @@ Alysanne: Greetings. Do you require any assistance?
 			Alysanne: This city is the capital of Hokkaido, which is the northernmost prefecture in Japan.
 		if global.board_tries == 2:
 			Alysanne: The city shares it's name with a very popular Japanese beer brand.
+	- Gramophone question
+		set global.oracle_help_taken = global.oracle_help_taken + 1
+		if global.music_tries == 1:
+			Alysanne: The sitar, originating from India, is a stringed musical instrument renowned for its distinctive resonance and intricate design.
+		if global.music_tries == 2:
+			Alysanne: The sitar, originating from India, is a stringed musical instrument renowned for its distinctive resonance and intricate design.\n
+			Alysanne: The erhu, a two-stringed bowed instrument, is a staple in traditional Chinese music. Originating from China, the erhu's history spans over a thousand years, and its soulful, emotive sound captures the essence of Chinese cultural expressions.
+	- Filing cabinet question
+		set global.oracle_help_taken = global.oracle_help_taken + 1
+		if global.file_tries == 1:
+			Alysanne: Romaji refers to the Romanization of the Japanese writing system, where Japanese characters are represented with the Latin alphabet. It is often used to aid non-Japanese speakers in pronunciation and language learning.
+		if global.file_tries == 2:
+			Alysanne: Romaji refers to the Romanization of the Japanese writing system, where Japanese characters are represented with the Latin alphabet. It is often used to aid non-Japanese speakers in pronunciation and language learning.
+			Alysanne: Kansai-ben is the regional dialect spoken in the Kansai region of Japan, encompassing cities such as Osaka, Kyoto, and Kobe.
+		
 - No
 	Alysanne: Godspeed.
 => END

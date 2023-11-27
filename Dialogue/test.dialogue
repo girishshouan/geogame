@@ -83,6 +83,48 @@ Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attem
 	Player - I don't think that's quite right.
 => END
 
+~ ongaku
+if global.music_tries == 3:
+	set global.has_lost = true
+	=> over
+The gramophone, which was made in the United States had an important role in Japanese culture, as it contributed to the preservation and dissemination of traditional Japanese music such as the Noh and Kabuki music.\n
+Which stringed instrument is commonly associated with performances in traditional theater?
+- Sitar
+	set global.music_tries = global.music_tries + 1
+	Player - I don't think that's quite right
+- Erhu
+	set global.music_tries = global.music_tries + 1
+	Player - I don't think that's quite right
+- Gayageum
+	set global.music_tries = global.music_tries + 1
+	Player - I don't think that's quite right
+- Shamisen
+	set global.music_tries = global.music_tries + 1
+	set global.answered_question_music = true
+	Player - I think that's the right answer.
+=> END
+
+~ file
+if global.music_tries == 3:
+	set global.has_lost = true
+	=> over
+Player - These documents seem to be written in Japanese.\n
+What is the term for the Japanese writing system that consists of characters borrowed from Chinese, used alongside the writing scripts Hiragana and Katakana?
+- Romaji
+	set global.file_tries = global.file_tries + 1
+	Player - I don't think that's quite right
+- Kanji
+	set global.file_tries = global.file_tries + 1
+	set global.answered_question_file = true
+	Player - I think that's the right answer
+- Hachijō
+	set global.file_tries = global.file_tries + 1
+	Player - I don't think that's quite right
+- Kansai-ben
+	set global.file_tries = global.file_tries + 1
+	Player - I don't think that's quite right
+=> END
+
 ~ over
 Player - What's happening?
 Strange voice - You have lost.

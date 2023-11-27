@@ -6,7 +6,7 @@ extends Node2D
 var paused = false
 
 func _on_button_pressed():
-	if global.answered_question_shelf and global.answered_question_picture and global.answered_question_board:
+	if global.answered_question_shelf and global.answered_question_picture and global.answered_question_board and global.answered_question_music and global.answered_question_file:
 		get_tree().change_scene_to_file("res://Levels/final_scene.tscn")
 		
 
