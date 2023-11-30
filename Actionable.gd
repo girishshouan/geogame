@@ -19,7 +19,10 @@ func action() -> void:
 		get_tree().quit()
 	'''
 	log(global.has_lost)
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	#DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	var balloon = load("res://Dialogue/balloon.tscn").instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(load("res://Dialogue/test.dialogue"), "start")
 	if global.has_lost == true:
 		await get_tree().create_timer(5.5).timeout
 		get_tree().quit()
