@@ -11,7 +11,7 @@ func _ready():
 	update_animation_parameters(starting_direction)
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("Interact"):
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()

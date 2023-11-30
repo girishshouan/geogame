@@ -3,6 +3,7 @@ extends CanvasLayer
 
 @onready var balloon: Panel = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
+@onready var portrait = %Portrait
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
@@ -52,7 +53,7 @@ var dialogue_line: DialogueLine:
 		if dialogue_line.responses.size() > 0:
 			balloon.focus_mode = Control.FOCUS_NONE
 			responses_menu.show()
-		elif dialogue_line.time != null:
+		elif dialogue_line.time != "":
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 			await get_tree().create_timer(time).timeout
 			next(dialogue_line.next_id)
@@ -105,6 +106,11 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	if dialogue_label.is_typing and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		get_viewport().set_input_as_handled()
 		dialogue_label.skip_typing()
+		return
+	elif dialogue_label.is_typing and Input.is_key_pressed(KEY_SPACE):
+		get_viewport().set_input_as_handled()
+		dialogue_label.skip_typing()
+		print("spacebar pressed")
 		return
 
 	if not is_waiting_for_input: return
