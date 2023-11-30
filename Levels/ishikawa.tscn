@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://eacljp0eiyt4"]
+[gd_scene load_steps=3 format=3 uid="uid://gqmu2lyues3b"]
 
 [ext_resource type="Script" path="res://Levels/ishikawa.gd" id="1_f1v2g"]
 [ext_resource type="Texture2D" uid="uid://dmvvl323sfblr" path="res://Art/ishikawa-goemon.jpg" id="2_0nmpl"]

@@ -2,9 +2,10 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var balloon = load("res://startdialogue/balloon.tscn").instantiate()
+	var balloon = load("res://startstory/balloon.tscn").instantiate()
 	get_tree().current_scene.add_child(balloon)
-	balloon.start(load("res://Dialogue/StartStory.dialogue"), "startstory")
+	balloon.start(load("res://Dialogue/debugtesting.dialogue"), "start")
+	
 	
 
 func _unhandled_input(_event: InputEvent) -> void:
