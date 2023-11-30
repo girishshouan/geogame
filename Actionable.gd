@@ -6,6 +6,7 @@ extends Area2D
 @export var dialogue_start: String = "start"
 @export var dialogue_over: String = "over"
 
+
 func action() -> void:
 	#var balloon : Node = Balloon.instantiate()
 	#get_tree().current_scene.add_child(balloon)
@@ -18,6 +19,7 @@ func action() -> void:
 		await get_tree().create_timer(5.5).timeout
 		get_tree().quit()
 	'''
+	get_node("exclamation").show()
 	log(global.has_lost)
 	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
 	if global.has_lost == true:

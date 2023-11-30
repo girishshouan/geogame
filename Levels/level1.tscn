@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dj73n38mqykg7"]
+[gd_scene load_steps=36 format=3 uid="uid://dj73n38mqykg7"]
 
 [ext_resource type="Script" path="res://Levels/level1.gd" id="1_dxoyf"]
 [ext_resource type="PackedScene" uid="uid://b2swceqeu2emd" path="res://Characters/detective.tscn" id="1_kc86o"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://c45dl6bvw2ubu" path="res://Art/shelf.png" id="4_3thkc"]
 [ext_resource type="PackedScene" uid="uid://da0mqmqatwp1k" path="res://actionable.tscn" id="5_i7hgv"]
 [ext_resource type="Resource" uid="uid://iy0vjmxd6eo3" path="res://Dialogue/test.dialogue" id="6_d00v4"]
-[ext_resource type="Texture2D" uid="uid://b88chyqq8bvey" path="res://Art/sakura-tree.png" id="7_75tok"]
 [ext_resource type="PackedScene" uid="uid://0s77jbuvrwms" path="res://Levels/pause_menu.tscn" id="8_4ti5r"]
 [ext_resource type="Texture2D" uid="uid://bb5d3ochmpyuu" path="res://Art/Outside_alt.png" id="8_h8q2m"]
 [ext_resource type="Texture2D" uid="uid://c5p8mbpeay0o6" path="res://Art/cat-statue.png" id="9_11pia"]
@@ -2204,6 +2203,12 @@ texture = ExtResource("3_j0ivw")
 16:26/0 = 0
 16:26/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:26/0/physics_layer_0/angular_velocity = 0.0
+12:11/0 = 0
+12:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:11/0/physics_layer_0/angular_velocity = 0.0
+12:12/0 = 0
+12:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:12/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xoyt"]
 texture = ExtResource("9_oq7q4")
@@ -3104,7 +3109,6 @@ texture = ExtResource("4_3thkc")
 5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gnuxy"]
-texture = ExtResource("7_75tok")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
