@@ -1,5 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dj73n38mqykg7"]
-
+[gd_scene load_steps=40 format=3 uid="uid://dj73n38mqykg7"]
 
 [ext_resource type="Script" path="res://Levels/level1.gd" id="1_dxoyf"]
 [ext_resource type="PackedScene" uid="uid://b2swceqeu2emd" path="res://Characters/detective.tscn" id="1_kc86o"]
