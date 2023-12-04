@@ -1,5 +1,5 @@
 ~ oracle_dialogue_start
-Alysanne: Greetings. Do you require any assistance?
+Alysanne: Konnichiwa. It seems you are in quite the pickle at the moment. Do you require any assistance?
 - Yes
 	Alysanne: Very well. I am aware of your predicament. As much as I'd like to help more, currently I will only be able to help you twice. So please choose what you need my help with wisely.\n
 	- Book shelf question
