@@ -1,0 +1,127 @@
+~ sphinx
+if global.sphinx_tries > 3:
+	set global.has_lost = true
+	=> over
+This mythical creature is regarded in Egypt as a benevolent representation of strength and ferocity. What is it called?\nAttempt number - {{global.sphinx_tries}}. Attempts allowed - 3
+- Anubis
+	Player: I don't think that's quite right.
+	set global.sphinx_tries = global.sphinx_tries + 1
+	=> END
+- Sekhmet
+	Player: I don't think that's quite right.
+	set global.sphinx_tries = global.sphinx_tries + 1
+	=> END
+- Sphinx
+	Player: The room just turned a bit brighter. I think that's the correct answer.
+	: The Sphinx is a mythical creature with the body of a lion and the head of a human, often wearing a royal headdress. In mythology, the Sphinx was known for posing riddles to travelers, and those who failed to answer correctly would face dire consequences.
+	set global.answered_question_sphinx = true
+	=> END
+- Bennu
+	Player: I don't think that's quite right.
+	set global.sphinx_tries = global.sphinx_tries + 1
+	=> END
+
+=> END
+
+~ pyramid
+if global.answered_question_sphinx and global.answered_question_debris and global.answered_question_oasis and answered_question_tomb:
+	=> start_pyramid
+else:
+	=> not_ready
+
+~ start_pyramid
+if global.pyramid_tries > 3:
+	set global.has_lost = true
+	=> over
+Which famous archaeological site in Egypt, known for its massive structures, includes the Great Sphinx and the Pyramids of Giza?\nAttempt number - {{global.pyramid_tries}}. Attempts allowed - 3
+- Karnak Temple Complex
+	Player: I don't think that's quite right.
+	set global.pyramid_tries = global.pyramid_tries + 1
+	=> END
+- Valley of the Kings
+	Player: I don't think that's quite right.
+	set global.pyramid_tries = global.pyramid_tries + 1
+	=> END
+- Giza Necropolis
+	Player: The room just turned a bit brighter. I think that's the correct answer.
+	 The Giza Necropolis is home to the iconic Pyramids of Giza— the Pyramid of Khufu (Great Pyramid), the Pyramid of Khafre, and the Pyramid of Menkaure.
+	set global.answered_question_pyramid = true
+	=> END
+- Luxor Temple
+	Player: I don't think that's quite right.
+	set global.pyramid_tries = global.pyramid_tries + 1
+	=> END
+=> END
+
+~ not_ready
+You are not yet prepared for this challange.
+=> END
+
+~ debris
+if global.debris_tries > 3:
+	set global.has_lost = true
+	=> over
+This is a piece of debris. Amidst debris not dissimilar to this, which artifact was found that helped to decipher the ancient Egyptian writing system of Hieroglyphics?\nAttempt number - {{global.debris_tries}}. Attempts allowed - 3
+- The Hammurabi Code
+	Player: I don't think that's quite right.
+	set global.debris_tries = global.debris_tries + 1
+	=> END
+- The Etruscan Pyrgi Tablets
+	Player: I don't think that's quite right.
+	set global.debris_tries = global.debris_tries + 1
+	=> END
+- The Rosetta Stone
+	Player: The room just turned a bit brighter. I think that's the correct answer.
+	The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
+	set global.answered_question_debris = true
+	=> END
+- The Behistun Inscription
+	Player: I don't think that's quite right.
+	set global.debris_tries = global.debris_tries + 1
+	=> END
+=> END
+
+~ oasis
+if global.oasis_tries > 2:
+	set global.has_lost = true
+	=> over
+Which oasis in Egypt is renowned for its unique Berber culture, historical significance, and association with Alexander the Great?\nAttempt number - {{global.oasis_tries}}. Attempts allowed - 3
+- Kharga Oasis
+	Player: I don't think that's quite right.
+	set global.oasis_tries = global.oasis_tries + 1
+	=> END
+- Dakhla Oasis
+	Player: I don't think that's quite right.
+	set global.oasis_tries = global.oasis_tries + 1
+	=> END
+- Siwa Oasis
+	Player: The room just turned a bit brighter. I think that's the correct answer.
+	set global.answered_question_oasis = true
+	=> END
+=> END
+
+~ tomb
+Which pharaoh's intact tomb was discovered by British archaeologist Howard Carter in 1922,  revealing a treasure trove of well-preserved artifacts?\nAttempt number - {{global.tomb_tries}}. Attempts allowed - 3
+- Cleopatra VII
+	Player: I don't think that's quite right.
+	set global.tomb_tries = global.tomb_tries + 1
+	=> END
+- Tutankhamun
+	Player: The room just turned a bit brighter. I think that's the correct answer.
+	set global.answered_question_oasis = true
+	=> END
+- Ramses II
+	Player: I don't think that's quite right.
+	set global.tomb_tries = global.tomb_tries + 1
+	=> END
+- Akhenaten
+	Player: I don't think that's quite right.
+	set global.tomb_tries = global.tomb_tries + 1
+	=> END
+=> END
+
+
+~ over
+Player: What's happening?
+Strange voice - You have lost.
+=> END

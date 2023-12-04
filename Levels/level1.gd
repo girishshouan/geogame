@@ -5,9 +5,12 @@ extends Node2D
 @onready var pause_menu = $Camera2D/PauseMenu
 var paused = false
 
+func _ready():
+	global.current_scene = 1
+
 func _on_button_pressed():
 	if global.answered_question_shelf and global.answered_question_picture and global.answered_question_board and global.answered_question_music and global.answered_question_file:
-		get_tree().change_scene_to_file("res://Levels/final_scene.tscn")
+		get_tree().change_scene_to_file("res://Levels/level2.tscn")
 		
 
 func _process(_delta):

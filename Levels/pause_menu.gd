@@ -9,8 +9,6 @@ func _on_resume_pressed():
 	level1.pauseMenu()
 
 
-
-
 func _on_quit_pressed():
 	get_tree().quit()
 

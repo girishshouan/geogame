@@ -1,5 +1,5 @@
 ~ start
-if global.shelf_tries == 3:
+if global.shelf_tries > 3:
 	set global.has_lost = true
 	=> over
 Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
@@ -25,7 +25,7 @@ Detective: This book shelf appears peculiar. It's full of popular manga, which a
 	=> END
 
 ~ board
-if global.board_tries == 3:
+if global.board_tries > 3:
 	set global.has_lost = true
 	=> over
 Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
@@ -63,7 +63,7 @@ Detective: This looks like an interesting picture. Do you want to look at it in 
 => END
 
 ~ ishikawa
-if global.picture_tries == 3:
+if global.picture_tries > 3:
 	set global.has_lost = true
 	=> over
 This picture depicts a legendary Japanese historical figure, who is often associated with daring exploits and depicted as a thief and skilled hero.\n
@@ -84,7 +84,7 @@ Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attem
 => END
 
 ~ ongaku
-if global.music_tries == 3:
+if global.music_tries > 3:
 	set global.has_lost = true
 	=> over
 The gramophone, which was made in the United States had an important role in Japanese culture, as it contributed to the preservation and dissemination of traditional Japanese music such as the Noh and Kabuki music.\n
@@ -105,7 +105,7 @@ Which stringed instrument is commonly associated with performances in traditiona
 => END
 
 ~ file
-if global.music_tries == 3:
+if global.file_tries > 3:
 	set global.has_lost = true
 	=> over
 Detective: These documents seem to be written in Japanese.\n
