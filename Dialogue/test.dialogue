@@ -2,25 +2,25 @@
 if global.shelf_tries == 3:
 	set global.has_lost = true
 	=> over
-Player - This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
+Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
 - Naruto
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 - One Piece
-	Player - The room just turned a bit brighter. I think that's the correct answer.
+	Detective: The room just turned a bit brighter. I think that's the correct answer.
 	set global.answered_question_shelf = true
 	=> END
 - Attack on Titan
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 - Inuyasha
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 - Astro Boy
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.shelf_tries = global.shelf_tries + 1
 	=> END
 
@@ -28,26 +28,26 @@ Player - This book shelf appears peculiar. It's full of popular manga, which are
 if global.board_tries == 3:
 	set global.has_lost = true
 	=> over
-Player - There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
+Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
 - Tokyo
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.board_tries = global.board_tries + 1
 - Akihabara
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.board_tries = global.board_tries + 1
 - Osaka
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.board_tries = global.board_tries + 1
 - Kyoto
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 	set global.board_tries = global.board_tries + 1
 - Sapporo
-	Player - I think that's the correct answer.
+	Detective: I think that's the correct answer.
 	set global.answered_question_board = true
 => END
 
 ~ locked
-Player - The door is locked!
+Detective: The door is locked!
 
 ~ sakura
 This is a Cherry Blossom tree or a Sakura tree. It holds a profound cultural significance in Japanese culture. The annual blooming of sakura marks the arrival of spring, a time of renewal and new beginnings. The ephemeral nature of sakura also serves as a metaphor for the transient yet exquisite essence of life, influencing art, literature, and philosophy in Japanese culture.
@@ -56,7 +56,7 @@ It's truly exquisite.
 => END
 
 ~ picture
-Player - This looks like an interesting picture. Do you want to look at it in detail?
+Detective: This looks like an interesting picture. Do you want to look at it in detail?
 - Yes
 	set global.view_picture = true
 - No
@@ -70,17 +70,17 @@ This picture depicts a legendary Japanese historical figure, who is often associ
 Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attempts allowed - 3
 - Miyamoto Musashi
 	set global.picture_tries = global.picture_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Ishikawa Goemon
 	set global.answered_question_picture = true
 	set global.picture_tries = global.picture_tries + 1
 	This is the correct answer!
 - Oda Nobunaga
 	set global.picture_tries = global.picture_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Tokugawa Ieyasu
 	set global.picture_tries = global.picture_tries + 1
-	Player - I don't think that's quite right.
+	Detective: I don't think that's quite right.
 => END
 
 ~ ongaku
@@ -91,41 +91,41 @@ The gramophone, which was made in the United States had an important role in Jap
 Which stringed instrument is commonly associated with performances in traditional theater?
 - Sitar
 	set global.music_tries = global.music_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Erhu
 	set global.music_tries = global.music_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Gayageum
 	set global.music_tries = global.music_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Shamisen
 	set global.music_tries = global.music_tries + 1
 	set global.answered_question_music = true
-	Player - I think that's the right answer.
+	Detective: I think that's the right answer.
 => END
 
 ~ file
 if global.music_tries == 3:
 	set global.has_lost = true
 	=> over
-Player - These documents seem to be written in Japanese.\n
+Detective: These documents seem to be written in Japanese.\n
 What is the term for the Japanese writing system that consists of characters borrowed from Chinese, used alongside the writing scripts Hiragana and Katakana?
 - Romaji
 	set global.file_tries = global.file_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Kanji
 	set global.file_tries = global.file_tries + 1
 	set global.answered_question_file = true
-	Player - I think that's the right answer
+	Detective: I think that's the right answer
 - Hachijō
 	set global.file_tries = global.file_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 - Kansai-ben
 	set global.file_tries = global.file_tries + 1
-	Player - I don't think that's quite right
+	Detective: I don't think that's quite right
 => END
 
 ~ over
-Player - What's happening?
+Detective: What's happening?
 Strange voice - You have lost.
 => END
