@@ -1,6 +1,6 @@
 extends Area2D
 
-#const Balloon = preload("res://Dialogue/balloon.tscn")
+const Balloon = preload("res://Dialogue/balloon.tscn")
 
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
@@ -22,6 +22,9 @@ func action() -> void:
 	#get_node("exclamation").show()
 	log(global.has_lost)
 	#DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	#var balloon = load("res://Dialogue/balloon.tscn").instantiate()
+	#get_tree().current_scene.add_child(balloon)
+	#balloon.start(load("res://Dialogue/test.dialogue"), "start")
 	var balloon = load("res://Dialogue/balloon.tscn").instantiate()
 	get_tree().current_scene.add_child(balloon)
 	#balloon.start(load("res://Dialogue/test.dialogue"), dialogue_start)
