@@ -1,5 +1,8 @@
 extends Node
 
+var current_scene = 0
+
+#level 1 vars
 var answered_question_shelf = false
 var answered_question_board = false
 var answered_question_picture = false
@@ -18,4 +21,21 @@ var tries = 1
 
 var view_picture = false
 var has_lost = false
+
+
+
+#Level 2 vars
+var answered_question_sphinx = false
+var answered_question_debris = false
+var answered_question_oasis = false
+var answered_question_pyramid = false
+var answered_question_tomb = false
+
+var sphinx_tries = 1
+var debris_tries = 1
+var oasis_tries = 1
+var pyramid_tries = 1
+var tomb_tries = 1
+
+var oracle_help_taken_l2 = 0
 

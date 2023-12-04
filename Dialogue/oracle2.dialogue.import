@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://f5la3bs7jxko"
+path="res://.godot/imported/oracle2.dialogue-c46af191d8d278f31f1c9f7f2238220e.tres"
+
+[deps]
+
+source_file="res://Dialogue/oracle2.dialogue"
+dest_files=["res://.godot/imported/oracle2.dialogue-c46af191d8d278f31f1c9f7f2238220e.tres"]
+
+[params]
+
+defaults=true
