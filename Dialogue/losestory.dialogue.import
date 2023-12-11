@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ckeo382o3twle"
+path="res://.godot/imported/losestory.dialogue-6cd5094def67e98d27ef2b4c03ae3f1f.tres"
+
+[deps]
+
+source_file="res://Dialogue/losestory.dialogue"
+dest_files=["res://.godot/imported/losestory.dialogue-6cd5094def67e98d27ef2b4c03ae3f1f.tres"]
+
+[params]
+
+defaults=true

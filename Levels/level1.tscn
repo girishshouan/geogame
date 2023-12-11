@@ -15840,11 +15840,13 @@ radius = 20.3961
 size = Vector2(187, 43)
 
 [node name="Level1" type="Node2D"]
-position = Vector2(12, 175)
+y_sort_enabled = true
+position = Vector2(12, 176)
 script = ExtResource("1_dxoyf")
 
 [node name="detective" parent="." instance=ExtResource("1_kc86o")]
 position = Vector2(147, 16)
+movement_speed = 250.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="detective"]
 remote_path = NodePath("../../Camera2D")
