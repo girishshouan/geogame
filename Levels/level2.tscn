@@ -4390,6 +4390,26 @@ libraries = {
 "": SubResource("AnimationLibrary_65g2u")
 }
 
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D"]
+offset_left = 115.0
+offset_top = -200.0
+offset_right = 223.0
+offset_bottom = -173.0
+max_value = 150.0
+
+[node name="Label" type="Label" parent="Camera2D/ProgressBar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -22.0
+offset_right = 88.0
+offset_bottom = 4.0
+text = "Time left"
+
+[node name="Timer" type="Timer" parent="Camera2D"]
+wait_time = 150.0
+one_shot = true
+autostart = true
+
 [node name="sphinx" type="RigidBody2D" parent="."]
 position = Vector2(-377, 199)
 gravity_scale = 0.0

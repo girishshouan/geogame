@@ -19,7 +19,7 @@ func _process(_delta):
 		
 	if global.view_picture == true:
 		get_tree().change_scene_to_file("res://Levels/ishikawa.tscn")
-		
+	
 
 func pauseMenu():
 	if paused:
@@ -30,3 +30,7 @@ func pauseMenu():
 		Engine.time_scale = 0
 		
 	paused = !paused
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://Levels/timer_timeout.tscn")
