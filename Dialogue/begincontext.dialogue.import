@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://crva6n8b5vp3k"
+path="res://.godot/imported/begincontext.dialogue-8d2740790e8ad49a3f5472826a775434.tres"
+
+[deps]
+
+source_file="res://Dialogue/begincontext.dialogue"
+dest_files=["res://.godot/imported/begincontext.dialogue-8d2740790e8ad49a3f5472826a775434.tres"]
+
+[params]
+
+defaults=true

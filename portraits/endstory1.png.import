@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmvvl323sfblr"
-path="res://.godot/imported/ishikawa-goemon.jpg-ac0e4aa3bf8b6670cf9a751e4fbe4c89.ctex"
+uid="uid://dvpfem16xa5ex"
+path="res://.godot/imported/endstory1.png-701731e67ece231cf1d45d6b8bc2b876.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/ishikawa-goemon.jpg"
-dest_files=["res://.godot/imported/ishikawa-goemon.jpg-ac0e4aa3bf8b6670cf9a751e4fbe4c89.ctex"]
+source_file="res://portraits/endstory1.png"
+dest_files=["res://.godot/imported/endstory1.png-701731e67ece231cf1d45d6b8bc2b876.ctex"]
 
 [params]
 

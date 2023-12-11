@@ -22,7 +22,7 @@ global="*res://global.gd"
 
 [dialogue_manager]
 
-general/balloon_path="res://debugtester/balloon.tscn"
+general/balloon_path="res://endstory/balloon.tscn"
 general/custom_test_scene_path="res://testdialogue.tscn"
 general/states=["global"]
 
@@ -76,7 +76,7 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/test.dialogue", "res://Dialogue/oracle.dialogue", "res://Dialogue/StartStory.dialogue", "res://Dialogue/debugtesting.dialogue", "res://Dialogue/level2.dialogue", "res://Dialogue/oracle2.dialogue", "res://Dialogue/endstory.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/test.dialogue", "res://Dialogue/oracle.dialogue", "res://Dialogue/StartStory.dialogue", "res://Dialogue/debugtesting.dialogue", "res://Dialogue/level2.dialogue", "res://Dialogue/oracle2.dialogue", "res://Dialogue/endstory.dialogue", "res://Dialogue/begincontext.dialogue", "res://Dialogue/levelcomplete.dialogue", "res://Dialogue/losestory.dialogue")
 
 [layer_names]
 
