@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://blyi6fpb0oonf"]
+[gd_scene load_steps=5 format=3 uid="uid://blyi6fpb0oonf"]
 
+[ext_resource type="Script" path="res://Levels/final_scene.gd" id="1_iyh4h"]
 [ext_resource type="Texture2D" uid="uid://b6pjomg2bbpj2" path="res://Art/working-title-assets/untitled folder/exterior-parallaxBG2.png" id="1_vkhpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoayu"]
@@ -455,20 +456,27 @@ texture = ExtResource("1_vkhpa")
 23:17/0 = 0
 24:17/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_7gwtq"]
+[sub_resource type="TileSet" id="TileSet_vbwrh"]
 sources/0 = SubResource("TileSetAtlasSource_xoayu")
 
 [node name="final_scene" type="Node2D"]
+script = ExtResource("1_iyh4h")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 213.0
-offset_top = 59.0
-offset_right = 575.0
-offset_bottom = 85.0
-text = "Congratulations! You have managed to escape."
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 342.0
+offset_top = 120.0
+offset_right = 704.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "THE END!"
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_7gwtq")
+tile_set = SubResource("TileSet_vbwrh")
 format = 2
 layer_0/name = "bottom"
 layer_0/z_index = -5

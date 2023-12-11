@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
 
-[ext_resource type="Script" path="res://startstory/balloon.gd" id="1_0wh53"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r6pyw"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_jjk3l"]
-[ext_resource type="FontFile" uid="uid://db6303j5qt6pp" path="res://fonts/Pixel12x10Mono.ttf" id="3_ulvro"]
+[ext_resource type="Script" path="res://endstory/balloon.gd" id="1_4u26j"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://db6303j5qt6pp" path="res://fonts/Pixel12x10Mono.ttf" id="3_tp2sa"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4c8n"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
@@ -17,7 +17,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mr1d7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
 bg_color = Color(0.121569, 0.121569, 0.121569, 1)
 border_width_left = 3
 border_width_top = 3
@@ -29,7 +29,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3ea"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
@@ -41,7 +41,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdemn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy0d5"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
@@ -54,15 +54,15 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 20
-Button/styles/disabled = SubResource("StyleBoxFlat_h4c8n")
-Button/styles/focus = SubResource("StyleBoxFlat_mr1d7")
-Button/styles/hover = SubResource("StyleBoxFlat_wm3ea")
-Button/styles/normal = SubResource("StyleBoxFlat_wm3ea")
+Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
+Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
+Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
+Button/styles/normal = SubResource("StyleBoxFlat_e0njw")
 MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
-Panel/styles/panel = SubResource("StyleBoxFlat_fdemn")
+Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [sub_resource type="Animation" id="Animation_qpw4c"]
 resource_name = "Press Space"
@@ -103,7 +103,7 @@ _data = {
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_0wh53")
+script = ExtResource("1_4u26j")
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
@@ -112,7 +112,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 21.0
-offset_top = -433.0
+offset_top = -431.0
 offset_right = -19.0
 offset_bottom = -19.0
 grow_horizontal = 2
@@ -151,11 +151,10 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/HBoxContainer/VBoxContainer" instance=ExtResource("2_r6pyw")]
+[node name="DialogueLabel" parent="Balloon/Dialogue/HBoxContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("3_ulvro")
 text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
@@ -165,10 +164,10 @@ anchor_left = 0.226
 anchor_top = 0.166
 anchor_right = 0.961
 anchor_bottom = 0.168
-offset_left = -3.31201
-offset_top = -404.224
-offset_right = -0.63208
-offset_bottom = -0.552
+offset_left = 239.44
+offset_top = -404.392
+offset_right = -1.16003
+offset_bottom = 272.784
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -177,7 +176,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
-script = ExtResource("3_jjk3l")
+script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
@@ -208,7 +207,7 @@ offset_right = 20.0
 offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_ulvro")
+theme_override_fonts/font = ExtResource("3_tp2sa")
 theme_override_font_sizes/font_size = 24
 text = "Press Spacebar..."
 

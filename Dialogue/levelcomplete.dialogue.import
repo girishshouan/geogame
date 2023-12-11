@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dwhw85pkyjndr"
+path="res://.godot/imported/levelcomplete.dialogue-28d9480cc202a4599e732e2802c191b3.tres"
+
+[deps]
+
+source_file="res://Dialogue/levelcomplete.dialogue"
+dest_files=["res://.godot/imported/levelcomplete.dialogue-28d9480cc202a4599e732e2802c191b3.tres"]
+
+[params]
+
+defaults=true

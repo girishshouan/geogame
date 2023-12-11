@@ -1,5 +1,5 @@
 ~ start
-if global.shelf_tries > 3:
+if global.shelf_tries == 3:
 	set global.has_lost = true
 	=> over
 Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
@@ -25,7 +25,7 @@ Detective: This book shelf appears peculiar. It's full of popular manga, which a
 	=> END
 
 ~ board
-if global.board_tries > 3:
+if global.board_tries == 3:
 	set global.has_lost = true
 	=> over
 Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
@@ -50,8 +50,10 @@ Detective: There seems to be something drawn on the board. It's a map of Japan. 
 Detective: The door is locked!
 
 ~ sakura
-This is a Cherry Blossom tree or a Sakura tree. It holds a profound cultural significance in Japanese culture. The annual blooming of sakura marks the arrival of spring, a time of renewal and new beginnings. The ephemeral nature of sakura also serves as a metaphor for the transient yet exquisite essence of life, influencing art, literature, and philosophy in Japanese culture.
-It's truly exquisite.
+
+Sakura Tree: This is a Cherry Blossom tree or a Sakura tree. It holds profound cultural significance in Japanese culture. It's annual blooming marks the arrival of spring, a time of renewal and new beginnings. 
+Sakura Tree: Sakura also serves as a metaphor for the transient yet exquisite essence of life, influencing art, literature, and philosophy in Japanese culture.
+Sakura Tree: It is truly exquisite.
 
 => END
 
@@ -63,18 +65,19 @@ Detective: This looks like an interesting picture. Do you want to look at it in 
 => END
 
 ~ ishikawa
-if global.picture_tries > 3:
+if global.picture_tries == 3:
 	set global.has_lost = true
 	=> over
-This picture depicts a legendary Japanese historical figure, who is often associated with daring exploits and depicted as a thief and skilled hero.\n
-Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attempts allowed - 3
+Ishikawa1: This picture depicts a legendary Japanese historical figure, who is often associated with daring exploits and depicted as a thief and skilled hero.\n
+Ishikawa1: Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attempts allowed - 3
 - Miyamoto Musashi
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right
 - Ishikawa Goemon
 	set global.answered_question_picture = true
 	set global.picture_tries = global.picture_tries + 1
-	This is the correct answer!
+	Detective: This is the correct answer!
+	Ishikawa2: Ishikawa Goemon was a legendary ninja from 16th-century Japan, celebrated as a Robin Hood figure as he was damous for stealing from the rich to aid the poor. His most notable act was an unsuccessful attempt to assassinate the warlord Toyotomi Hideyoshi. This failure led to Goemon and his son being boiled alive in a large pot, transformed him into a folk hero, immortalized in Japanese culture from plays to video games.
 - Oda Nobunaga
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right
@@ -84,7 +87,7 @@ Who does this painting depict?\nAttempt number - {{global.picture_tries}}. Attem
 => END
 
 ~ ongaku
-if global.music_tries > 3:
+if global.music_tries == 3:
 	set global.has_lost = true
 	=> over
 The gramophone, which was made in the United States had an important role in Japanese culture, as it contributed to the preservation and dissemination of traditional Japanese music such as the Noh and Kabuki music.\n
@@ -105,7 +108,7 @@ Which stringed instrument is commonly associated with performances in traditiona
 => END
 
 ~ file
-if global.file_tries > 3:
+if global.music_tries == 3:
 	set global.has_lost = true
 	=> over
 Detective: These documents seem to be written in Japanese.\n

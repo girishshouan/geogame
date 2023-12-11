@@ -4,21 +4,37 @@ extends Node2D
 
 @onready var pause_menu = $Camera2D/PauseMenu
 var paused = false
+var answered_all = true
+var scene_stack = []
 
 func _ready():
 	global.current_scene = 1
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/begincontext.dialogue"), "start")
 
+
+# for escape button
 func _on_button_pressed():
 	if global.answered_question_shelf and global.answered_question_picture and global.answered_question_board and global.answered_question_music and global.answered_question_file:
 		get_tree().change_scene_to_file("res://Levels/level2.tscn")
-		
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Pause"):
 		pauseMenu()
 		
 	if global.view_picture == true:
-		get_tree().change_scene_to_file("res://Levels/ishikawa.tscn")
+		#get_tree().change_scene_to_file("res://Levels/ishikawa.tscn")
+		var balloon = load("res://endstory/balloon.tscn").instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load("res://Dialogue/test.dialogue"), "ishikawa")
+		global.view_picture = false
+	
+	
+	# after player answers all 5 correct, show dialogue so player knows he can escape to next room
+	if global.answered_question_shelf and global.answered_question_picture and global.answered_question_board and global.answered_question_music and global.answered_question_file and answered_all:
+		var balloon = load("res://endstory/balloon.tscn").instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load("res://Dialogue/levelcomplete.dialogue"), "level1")
+		answered_all = false
 		
 
 func pauseMenu():
