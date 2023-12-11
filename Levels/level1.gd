@@ -35,7 +35,6 @@ func _process(_delta):
 		get_tree().current_scene.add_child(balloon)
 		balloon.start(load("res://Dialogue/levelcomplete.dialogue"), "level1")
 		answered_all = false
-		
 
 func pauseMenu():
 	if paused:
@@ -46,3 +45,7 @@ func pauseMenu():
 		Engine.time_scale = 0
 		
 	paused = !paused
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://Levels/timer_timeout.tscn")

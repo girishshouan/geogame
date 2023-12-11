@@ -11,11 +11,15 @@ func _ready():
 	update_animation_parameters(starting_direction)
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("Interact"):
+	'''
+	if Input.is_action_just_pressed("Interact") and global.actionable_mutex == 0:
+		global.actionable_mutex = 1
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()
 			return
+		global.actionable_mutex = 0
+	'''
 		#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/test.dialogue"), "start")
 		#return
 	
@@ -34,7 +38,13 @@ func _physics_process(_delta):
 	pick_new_state()
 	move_and_slide()
 	
-	
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("Interact"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
 	
 func update_animation_parameters(move_input : Vector2):
 	if(move_input != Vector2.ZERO):
