@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dph1ssnh6uwtj"]
+[gd_scene load_steps=42 format=3 uid="uid://dph1ssnh6uwtj"]
 
 [ext_resource type="PackedScene" uid="uid://b2swceqeu2emd" path="res://Characters/detective.tscn" id="1_8luf3"]
 [ext_resource type="Script" path="res://Levels/level2.gd" id="1_vt2iw"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dmwahx3ckqujw" path="res://Art/Egypt/Pyramid.png" id="10_xx5ke"]
 [ext_resource type="PackedScene" uid="uid://da0mqmqatwp1k" path="res://actionable.tscn" id="13_xi7vr"]
 [ext_resource type="Resource" uid="uid://baqo4ypyt3foe" path="res://Dialogue/level2.dialogue" id="14_i0nqf"]
+[ext_resource type="Script" path="res://Levels/counterlevel2.gd" id="15_gkxys"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yp6ag"]
 texture = ExtResource("2_rawdb")
@@ -4409,6 +4410,13 @@ text = "Time left"
 wait_time = 150.0
 one_shot = true
 autostart = true
+
+[node name="counterlevel2" type="Label" parent="Camera2D"]
+offset_left = -392.0
+offset_top = -216.0
+offset_right = -352.0
+offset_bottom = -193.0
+script = ExtResource("15_gkxys")
 
 [node name="sphinx" type="RigidBody2D" parent="."]
 position = Vector2(-377, 199)

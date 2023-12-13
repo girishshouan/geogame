@@ -10,6 +10,13 @@ var answered_question_picture = false
 var answered_question_music = false
 var answered_question_file = false
 
+#level 1 vars for counter
+var answered_question_shelf_counter = false
+var answered_question_board_counter = false
+var answered_question_picture_counter = false
+var answered_question_music_counter = false
+var answered_question_file_counter = false
+
 var oracle_help_taken = 0
 
 var shelf_tries = 1
@@ -31,6 +38,13 @@ var answered_question_debris = false
 var answered_question_oasis = false
 var answered_question_pyramid = false
 var answered_question_tomb = false
+
+#level 2 vars for counter
+var answered_question_sphinx_counter = false
+var answered_question_debris_counter = false
+var answered_question_oasis_counter = false
+var answered_question_pyramid_counter = false
+var answered_question_tomb_counter = false
 
 var sphinx_tries = 1
 var debris_tries = 1

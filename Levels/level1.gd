@@ -6,6 +6,7 @@ extends Node2D
 var paused = false
 var answered_all = true
 var scene_stack = []
+var counter = 0
 
 func _ready():
 	global.current_scene = 1
@@ -18,6 +19,7 @@ func _on_button_pressed():
 		get_tree().change_scene_to_file("res://Levels/level2.tscn")
 
 func _process(_delta):
+	
 	if Input.is_action_just_pressed("Pause"):
 		pauseMenu()
 		
