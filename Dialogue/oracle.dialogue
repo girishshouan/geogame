@@ -34,22 +34,32 @@ Alysanne: Konnichiwa. It seems you are in quite the pickle at the moment. Do you
 				Alysanne: This iconic volcanic mountain is a popular subject in Japanese art and literature.
 			if global.board_tries == 2:
 				Alysanne: It is located on Honshu, near Tokyo, and is a UNESCO World Heritage Site.
-
 	- Gramophone question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
-		if global.music_tries == 1:
-			Alysanne: The sitar, originating from India, is a stringed musical instrument renowned for its distinctive resonance and intricate design.
-		if global.music_tries == 2:
-			Alysanne: The sitar, originating from India, is a stringed musical instrument renowned for its distinctive resonance and intricate design.\n
-			Alysanne: The erhu, a two-stringed bowed instrument, is a staple in traditional Chinese music. Originating from China, the erhu's history spans over a thousand years, and its soulful, emotive sound captures the essence of Chinese cultural expressions.
+		if global.random_three == 1:
+			if global.music_tries == 1:
+				Alysanne: The sitar, originating from India, is a stringed musical instrument renowned for its distinctive resonance and intricate design.
+			if global.music_tries == 2:
+				Alysanne: The sitar, originating from India, is a stringed musical instrument renowned for its distinctive resonance and intricate design.\n
+				Alysanne: The erhu, a two-stringed bowed instrument, is a staple in traditional Chinese music. Originating from China, the erhu's history spans over a thousand years, and its soulful, emotive sound captures the essence of Chinese cultural expressions.
+		else:
+			if global.music_tries == 1:
+				Alysanne: This genre often incorporates elements of Western pop and rock music.
+			if global.music_tries == 2:
+				Alysanne: It has gained popularity not only in Japan but also internationally.\n
 	- Filing cabinet question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
-		if global.file_tries == 1:
-			Alysanne: Romaji refers to the Romanization of the Japanese writing system, where Japanese characters are represented with the Latin alphabet. It is often used to aid non-Japanese speakers in pronunciation and language learning.
-		if global.file_tries == 2:
-			Alysanne: Romaji refers to the Romanization of the Japanese writing system, where Japanese characters are represented with the Latin alphabet. It is often used to aid non-Japanese speakers in pronunciation and language learning.
-			Alysanne: Kansai-ben is the regional dialect spoken in the Kansai region of Japan, encompassing cities such as Osaka, Kyoto, and Kobe.
-		
+		if global.random_five == 1:
+			if global.file_tries == 1:
+				Alysanne: Romaji refers to the Romanization of the Japanese writing system, where Japanese characters are represented with the Latin alphabet. It is often used to aid non-Japanese speakers in pronunciation and language learning.
+			if global.file_tries == 2:
+				Alysanne: Romaji refers to the Romanization of the Japanese writing system, where Japanese characters are represented with the Latin alphabet. It is often used to aid non-Japanese speakers in pronunciation and language learning.
+				Alysanne: Kansai-ben is the regional dialect spoken in the Kansai region of Japan, encompassing cities such as Osaka, Kyoto, and Kobe.
+		else:
+			if global.file_tries == 1:
+				Alysanne: These characters represent logographic and syllabic scripts.
+			if global.file_tries == 2:
+				Alysanne: They are often used for nouns, verb stems, and adjectives in Japanese writing.
 - No
 	Alysanne: Godspeed.
 => END
