@@ -21,6 +21,7 @@ Detective: This mythical creature is regarded in Egypt as a benevolent represent
 	Detective: The room just turned a bit brighter. I think that's the correct answer.
 	: The Sphinx is a mythical creature with the body of a lion and the head of a human, often wearing a royal headdress. In mythology, the Sphinx was known for posing riddles to travelers, and those who failed to answer correctly would face dire consequences.
 	set global.answered_question_sphinx = true
+	set global.answered_question_sphinx_counter = true
 	=> END
 - Bennu
 Detective: I don't think that's quite right.
@@ -55,6 +56,7 @@ Which famous archaeological site in Egypt, known for its massive structures, inc
 	Detective: The room just turned a bit brighter. I think that's the correct answer.
 	 The Giza Necropolis is home to the iconic Pyramids of Giza— the Pyramid of Khufu (Great Pyramid), the Pyramid of Khafre, and the Pyramid of Menkaure.
 	set global.answered_question_pyramid = true
+	set global.answered_question_pyramid_counter = true
 	=> END
 - Luxor Temple
 	Detective: I don't think that's quite right.
@@ -83,6 +85,7 @@ This is a piece of debris. Amidst debris not dissimilar to this, which artifact 
 	Detective: The room just turned a bit brighter. I think that's the correct answer.
 	The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
 	set global.answered_question_debris = true
+	set global.answered_question_debris_counter = true
 	=> END
 - The Behistun Inscription
 	Detective: I don't think that's quite right.
@@ -106,6 +109,7 @@ Which oasis in Egypt is renowned for its unique Berber culture, historical signi
 - Siwa Oasis
 	Detective: The room just turned a bit brighter. I think that's the correct answer.
 	set global.answered_question_oasis = true
+	set global.answered_question_oasis_counter = true
 	=> END
 => END
 
@@ -117,7 +121,8 @@ Which pharaoh's intact tomb was discovered by British archaeologist Howard Carte
 	=> END
 - Tutankhamun
 	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	set global.answered_question_oasis = true
+	set global.answered_question_tomb = true
+	set global.answered_question_tomb_counter = true
 	=> END
 - Ramses II
 	Detective: I don't think that's quite right.
