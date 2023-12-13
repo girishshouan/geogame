@@ -15906,6 +15906,7 @@ libraries = {
 }
 
 [node name="TimerProgressBar" parent="Camera2D" instance=ExtResource("12_imnwo")]
+visible = false
 position = Vector2(196, -178)
 
 [node name="counter" type="Label" parent="Camera2D"]

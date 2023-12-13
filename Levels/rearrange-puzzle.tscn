@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbc0ytt7mrak4"]
 
-[ext_resource type="Texture2D" uid="uid://dmvvl323sfblr" path="res://Art/ishikawa-goemon.jpg" id="1_606ww"]
+[ext_resource type="Texture2D" path="res://Art/ishikawa-goemon.jpg" id="1_606ww"]
 [ext_resource type="Script" path="res://Levels/puzzle-tile.gd" id="1_jwwoe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwwxe"]

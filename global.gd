@@ -3,6 +3,7 @@ extends Node
 var current_scene = 0
 var actionable_mutex = 0
 
+
 #level 1 vars
 var answered_question_shelf = false
 var answered_question_board = false
@@ -33,6 +34,11 @@ var has_lost = false
 
 
 #Level 2 vars
+var random_one = 0
+var random_two = 0
+var random_three = 0
+var random_four = 0
+var random_five = 0
 var answered_question_sphinx = false
 var answered_question_debris = false
 var answered_question_oasis = false

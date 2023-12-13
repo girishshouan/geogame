@@ -2,51 +2,96 @@
 if global.shelf_tries == 3:
 	set global.has_lost = true
 	=> over
-Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
-- Naruto
-	Detective: I don't think that's quite right.
-	set global.shelf_tries = global.shelf_tries + 1
-	=> END
-- One Piece
-	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	set global.answered_question_shelf = true
-	set global.answered_question_shelf_counter = true
-	=> END
-- Attack on Titan
-	Detective: I don't think that's quite right.
-	set global.shelf_tries = global.shelf_tries + 1
-	=> END
-- Inuyasha
-	Detective: I don't think that's quite right.
-	set global.shelf_tries = global.shelf_tries + 1
-	=> END
-- Astro Boy
-	Detective: I don't think that's quite right.
-	set global.shelf_tries = global.shelf_tries + 1
-	=> END
+if global.random_one == 1:
+	Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
+	- Naruto
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+	- One Piece
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		set global.answered_question_shelf = true
+		set global.answered_question_shelf_counter = true
+		=> END
+	- Attack on Titan
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+	- Inuyasha
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+	- Astro Boy
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+else:
+	Which literary work by Haruki Murakami features a protagonist who spends his nights reading classic literature in a Denny's?
+	- Norwegian Wood
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+	- 1Q84
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+	- Kafka on the Shore
+		Detective: I don't think that's quite right.
+		set global.shelf_tries = global.shelf_tries + 1
+		=> END
+	- After Dark
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		set global.answered_question_shelf = true
+		set global.answered_question_shelf_counter = true
+		=> END
 
 ~ board
 if global.board_tries == 3:
 	set global.has_lost = true
 	=> over
-Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
-- Tokyo
-	Detective: I don't think that's quite right.
-	set global.board_tries = global.board_tries + 1
-- Akihabara
-	Detective: I don't think that's quite right.
-	set global.board_tries = global.board_tries + 1
-- Osaka
-	Detective: I don't think that's quite right.
-	set global.board_tries = global.board_tries + 1
-- Kyoto
-	Detective: I don't think that's quite right.
-	set global.board_tries = global.board_tries + 1
-- Sapporo
-	Detective: I think that's the correct answer.
-	set global.answered_question_board = true
-	set global.answered_question_board_counter = true
-=> END
+if global.two == 1:
+	Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
+	- Tokyo
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
+	- Akihabara
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
+	- Osaka
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
+	- Kyoto
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
+	- Sapporo
+		Detective: I think that's the correct answer.
+		set global.answered_question_board = true
+		set global.answered_question_shelf_counter = true
+		=> END
+	=> END
+else:
+	Which mountain, often considered a symbol of Japan, is the highest peak in the country?
+	- Mount Tateyama
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
+	- Mount Fuji
+		Detective: I think that's the correct answer.
+		set global.answered_question_board = true
+		set global.answered_question_shelf_counter = true
+		=> END
+	- Mount Aso
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
+	- Mount Haku
+		Detective: I don't think that's quite right.
+		set global.board_tries = global.board_tries + 1
+		=> END
 
 ~ locked
 Detective: The door is locked!

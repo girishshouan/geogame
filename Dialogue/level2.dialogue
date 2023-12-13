@@ -3,32 +3,50 @@ if global.sphinx_tries > 3:
 	set global.has_lost = true
 	=> over
 	
-% {Detective: question 1}
-% {
-	Detective: question 1
-}
-% {
-Detective: This mythical creature is regarded in Egypt as a benevolent representation of strength and ferocity. What is it called?\nAttempt number - {{global.sphinx_tries}}. Attempts allowed - 3
-- Anubis
+if global.random_one == 2:
+	Detective: This mythical creature is regarded in Egypt as a benevolent representation of strength and ferocity. What is it called?\nAttempt number - {{global.sphinx_tries}}. Attempts allowed - 3
+	- Anubis
+		Detective: I don't think that's quite right.
+		set global.sphinx_tries = global.sphinx_tries + 1
+		=> END
+	- Sekhmet
+		Detective: I don't think that's quite right.
+		set global.sphinx_tries = global.sphinx_tries + 1
+		=> END
+	- Sphinx
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		: The Sphinx is a mythical creature with the body of a lion and the head of a human, often wearing a royal headdress. In mythology, the Sphinx was known for posing riddles to travelers, and those who failed to answer correctly would face dire consequences.
+		set global.answered_question_sphinx = true
+		set global.answered_question_sphinx_counter = true
+		=> END
+	- Bennu
 	Detective: I don't think that's quite right.
 	set global.sphinx_tries = global.sphinx_tries + 1
 	=> END
-- Sekhmet
-	Detective: I don't think that's quite right.
-	set global.sphinx_tries = global.sphinx_tries + 1
-	=> END
-- Sphinx
-	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	: The Sphinx is a mythical creature with the body of a lion and the head of a human, often wearing a royal headdress. In mythology, the Sphinx was known for posing riddles to travelers, and those who failed to answer correctly would face dire consequences.
-	set global.answered_question_sphinx = true
-	set global.answered_question_sphinx_counter = true
-	=> END
-- Bennu
-Detective: I don't think that's quite right.
-set global.sphinx_tries = global.sphinx_tries + 1
-=> END
-}
-
+else:
+	A deep echoing voice addresses you.\n
+	Wanderer of the endless dunes, you have stumbled upon the realm of the Sphinx. Heed my words, for the sands you tread hold secrets old as time. Before you lies a path to salvation, but it is not without its trials. Listen closely to the riddle I present, for your fate hangs delicately in the balance of your wit and wisdom. Answer correctly, and the sands shall part, guiding you to safety and fortune. But beware, fail in this endeavor, and the desert shall be your eternal tomb, your tale lost amidst the whispering sands.
+	Here is your challenge:\n
+	'At night they come without being fetched. By day they are lost without being stolen. What are they?'\n
+	Choose your answer wisely, traveler, for the desert shows no mercy to those who falter.
+	- Grains of sand
+		Detective: I don't think that's quite right.
+		set global.sphinx_tries = global.sphinx_tries + 1
+		=> END
+	- Stars
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		: The Sphinx is a mythical creature with the body of a lion and the head of a human, often wearing a royal headdress. In mythology, the Sphinx was known for posing riddles to travelers, and those who failed to answer correctly would face dire consequences.
+		set global.answered_question_sphinx = true
+		set global.answered_question_sphinx_counter = true
+		=> END
+	- Dreams
+		Detective: I don't think that's quite right.
+		set global.sphinx_tries = global.sphinx_tries + 1
+		=> END
+	-  Rivers
+		Detective: I don't think that's quite right.
+		set global.sphinx_tries = global.sphinx_tries + 1
+		=> END
 
 
 => END
@@ -43,26 +61,47 @@ else:
 if global.pyramid_tries > 3:
 	set global.has_lost = true
 	=> over
-Which famous archaeological site in Egypt, known for its massive structures, includes the Great Sphinx and the Pyramids of Giza?\nAttempt number - {{global.pyramid_tries}}. Attempts allowed - 3
-- Karnak Temple Complex
-	Detective: I don't think that's quite right.
-	set global.pyramid_tries = global.pyramid_tries + 1
+
+if global.random_four == 1:
+	Which famous archaeological site in Egypt, known for its massive structures, includes the Great Sphinx and the Pyramids of Giza?\nAttempt number - {{global.pyramid_tries}}. Attempts allowed - 3
+	- Karnak Temple Complex
+		Detective: I don't think that's quite right.
+		set global.pyramid_tries = global.pyramid_tries + 1
+		=> END
+	- Valley of the Kings
+		Detective: I don't think that's quite right.
+		set global.pyramid_tries = global.pyramid_tries + 1
+		=> END
+	- Giza Necropolis
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		 The Giza Necropolis is home to the iconic Pyramids of Giza— the Pyramid of Khufu (Great Pyramid), the Pyramid of Khafre, and the Pyramid of Menkaure.
+		set global.answered_question_pyramid = true
+		set global.answered_question_pyramid_counter = true
+		=> END
+	- Luxor Temple
+		Detective: I don't think that's quite right.
+		set global.pyramid_tries = global.pyramid_tries + 1
+		=> END
 	=> END
-- Valley of the Kings
-	Detective: I don't think that's quite right.
-	set global.pyramid_tries = global.pyramid_tries + 1
-	=> END
-- Giza Necropolis
-	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	 The Giza Necropolis is home to the iconic Pyramids of Giza— the Pyramid of Khufu (Great Pyramid), the Pyramid of Khafre, and the Pyramid of Menkaure.
-	set global.answered_question_pyramid = true
-	set global.answered_question_pyramid_counter = true
-	=> END
-- Luxor Temple
-	Detective: I don't think that's quite right.
-	set global.pyramid_tries = global.pyramid_tries + 1
-	=> END
-=> END
+else:
+	What mathematical concept is believed to have influenced the proportions of the pyramids in Egypt?
+	- Fibonacci sequence
+		Detective: I don't think that's quite right.
+		set global.pyramid_tries = global.pyramid_tries + 1
+		=> END
+	- Pi
+		Detective: I don't think that's quite right.
+		set global.pyramid_tries = global.pyramid_tries + 1
+		=> END
+	- Golden Ratio
+		Detective: The golden ratio is a mathematical concept that is often associated with aesthetically pleasing proportions. Some theories suggest that the ancient Egyptians may have incorporated the golden ratio in the design of their pyramids.
+		set global.answered_question_pyramid = true
+		set global.answered_question_pyramid_counter = true
+		=> END
+	- Prime numbers
+		Detective: I don't think that's quite right.
+		set global.pyramid_tries = global.pyramid_tries + 1
+		=> END
 
 ~ not_ready
 You are not yet prepared for this challange.
@@ -72,67 +111,129 @@ You are not yet prepared for this challange.
 if global.debris_tries > 3:
 	set global.has_lost = true
 	=> over
-This is a piece of debris. Amidst debris not dissimilar to this, which artifact was found that helped to decipher the ancient Egyptian writing system of Hieroglyphics?\nAttempt number - {{global.debris_tries}}. Attempts allowed - 3
-- The Hammurabi Code
-	Detective: I don't think that's quite right.
-	set global.debris_tries = global.debris_tries + 1
+	
+if global.random_two == 2:
+	This is a piece of debris. Amidst debris not dissimilar to this, which artifact was found that helped to decipher the ancient Egyptian writing system of Hieroglyphics?\nAttempt number - {{global.debris_tries}}. Attempts allowed - 3
+	- The Hammurabi Code
+		Detective: I don't think that's quite right.
+		set global.debris_tries = global.debris_tries + 1
+		=> END
+	- The Etruscan Pyrgi Tablets
+		Detective: I don't think that's quite right.
+		set global.debris_tries = global.debris_tries + 1
+		=> END
+	- The Rosetta Stone
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
+		set global.answered_question_debris = true
+		set global.answered_question_debris_counter = true
+		=> END
+	- The Behistun Inscription
+		Detective: I don't think that's quite right.
+		set global.debris_tries = global.debris_tries + 1
+		=> END
 	=> END
-- The Etruscan Pyrgi Tablets
-	Detective: I don't think that's quite right.
-	set global.debris_tries = global.debris_tries + 1
+else:
+	Which animal is prominently featured in the design of many of King Tut's personal belongings, reflecting its association with rebirth and the afterlife?
+	- Cat
+		Detective: I don't think that's quite right.
+		set global.debris_tries = global.debris_tries + 1
+		=> END
+	- Scarab Beetle
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
+		set global.answered_question_debris = true
+		set global.answered_question_debris_counter = true
+		=> END
+	- Lion
+		Detective: I don't think that's quite right.
+		set global.debris_tries = global.debris_tries + 1
+		=> END
+	- Falcon
+		Detective: I don't think that's quite right.
+		set global.debris_tries = global.debris_tries + 1
+		=> END
 	=> END
-- The Rosetta Stone
-	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
-	set global.answered_question_debris = true
-	set global.answered_question_debris_counter = true
-	=> END
-- The Behistun Inscription
-	Detective: I don't think that's quite right.
-	set global.debris_tries = global.debris_tries + 1
-	=> END
-=> END
 
 ~ oasis
 if global.oasis_tries > 2:
 	set global.has_lost = true
 	=> over
-Which oasis in Egypt is renowned for its unique Berber culture, historical significance, and association with Alexander the Great?\nAttempt number - {{global.oasis_tries}}. Attempts allowed - 3
-- Kharga Oasis
-	Detective: I don't think that's quite right.
-	set global.oasis_tries = global.oasis_tries + 1
+
+if global.random_three == 1:
+	Which oasis in Egypt is renowned for its unique Berber culture, historical significance, and association with Alexander the Great?\nAttempt number - {{global.oasis_tries}}. Attempts allowed - 3
+	- Kharga Oasis
+		Detective: I don't think that's quite right.
+		set global.oasis_tries = global.oasis_tries + 1
+		=> END
+	- Dakhla Oasis
+		Detective: I don't think that's quite right.
+		set global.oasis_tries = global.oasis_tries + 1
+		=> END
+	- Siwa Oasis
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		set global.answered_question_oasis = true
+		set global.answered_question_oasis_counter = true
+		=> END
 	=> END
-- Dakhla Oasis
-	Detective: I don't think that's quite right.
-	set global.oasis_tries = global.oasis_tries + 1
+else:
+	Which river is associated with the formation of Egypt's oases?
+	- River Nile
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		set global.answered_question_oasis = true
+		set global.answered_question_oasis_counter = true
+		=> END
+	- River Jordan
+		Detective: I don't think that's quite right.
+		set global.oasis_tries = global.oasis_tries + 1
+		=> END
+	- River Tigris 
+		Detective: I don't think that's quite right.
+		set global.oasis_tries = global.oasis_tries + 1
+		=> END
 	=> END
-- Siwa Oasis
-	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	set global.answered_question_oasis = true
-	set global.answered_question_oasis_counter = true
-	=> END
-=> END
 
 ~ tomb
-Which pharaoh's intact tomb was discovered by British archaeologist Howard Carter in 1922,  revealing a treasure trove of well-preserved artifacts?\nAttempt number - {{global.tomb_tries}}. Attempts allowed - 3
-- Cleopatra VII
-	Detective: I don't think that's quite right.
-	set global.tomb_tries = global.tomb_tries + 1
+if global.random_five == 1:
+	Which pharaoh's intact tomb was discovered by British archaeologist Howard Carter in 1922,  revealing a treasure trove of well-preserved artifacts?\nAttempt number - {{global.tomb_tries}}. Attempts allowed - 3
+	- Cleopatra VII
+		Detective: I don't think that's quite right.
+		set global.tomb_tries = global.tomb_tries + 1
+		=> END
+	- Tutankhamun
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		set global.answered_question_tomb = true
+		set global.answered_question_tomb_counter = true
+		=> END
+	- Ramses II
+		Detective: I don't think that's quite right.
+		set global.tomb_tries = global.tomb_tries + 1
+		=> END
+	- Akhenaten
+		Detective: I don't think that's quite right.
+		set global.tomb_tries = global.tomb_tries + 1
+		=> END
 	=> END
-- Tutankhamun
-	Detective: The room just turned a bit brighter. I think that's the correct answer.
-	set global.answered_question_tomb = true
-	set global.answered_question_tomb_counter = true
+else:
+	Which ancient Egyptian queen is famously associated with a magnificent tomb in the Valley of the Queens?
+	- Nefertiti
+		Detective: I don't think that's quite right.
+		set global.tomb_tries = global.tomb_tries + 1
+		=> END
+	- Cleopatra
+		Detective: I don't think that's quite right.
+		set global.tomb_tries = global.tomb_tries + 1
+		=> END
+	- Hatshepsut
+		Detective: I don't think that's quite right.
+		set global.tomb_tries = global.tomb_tries + 1
+		=> END
+	- Nefertari
+		Detective: The room just turned a bit brighter. I think that's the correct answer.
+		set global.answered_question_tomb = true
+		set global.answered_question_tomb_counter = true
+		=> END
 	=> END
-- Ramses II
-	Detective: I don't think that's quite right.
-	set global.tomb_tries = global.tomb_tries + 1
-	=> END
-- Akhenaten
-	Detective: I don't think that's quite right.
-	set global.tomb_tries = global.tomb_tries + 1
-	=> END
-=> END
 
 
 ~ over
