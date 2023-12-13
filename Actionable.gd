@@ -21,4 +21,4 @@ func action() -> void:
 	balloon.start(dialogue_resource, dialogue_start)
 	if global.has_lost == true:
 		await get_tree().create_timer(5.5).timeout
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Levels/lose_scene.tscn")

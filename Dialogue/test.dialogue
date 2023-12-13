@@ -11,6 +11,7 @@ if global.random_one == 1:
 	- One Piece
 		Detective: The room just turned a bit brighter. I think that's the correct answer.
 		set global.answered_question_shelf = true
+		set global.answered_question_shelf_counter = true
 		=> END
 	- Attack on Titan
 		Detective: I don't think that's quite right.
@@ -41,6 +42,7 @@ else:
 	- After Dark
 		Detective: The room just turned a bit brighter. I think that's the correct answer.
 		set global.answered_question_shelf = true
+		set global.answered_question_shelf_counter = true
 		=> END
 
 ~ board
@@ -68,6 +70,7 @@ if global.two == 1:
 	- Sapporo
 		Detective: I think that's the correct answer.
 		set global.answered_question_board = true
+		set global.answered_question_shelf_counter = true
 		=> END
 	=> END
 else:
@@ -79,6 +82,7 @@ else:
 	- Mount Fuji
 		Detective: I think that's the correct answer.
 		set global.answered_question_board = true
+		set global.answered_question_shelf_counter = true
 		=> END
 	- Mount Aso
 		Detective: I don't think that's quite right.
@@ -119,6 +123,8 @@ Ishikawa1: Who does this painting depict?\nAttempt number - {{global.picture_tri
 - Ishikawa Goemon
 	set global.answered_question_picture = true
 	set global.picture_tries = global.picture_tries + 1
+	set global.answered_question_picture_counter = true
+	
 	Detective: This is the correct answer!
 	Ishikawa2: Ishikawa Goemon was a legendary ninja from 16th-century Japan, celebrated as a Robin Hood figure as he was damous for stealing from the rich to aid the poor. His most notable act was an unsuccessful attempt to assassinate the warlord Toyotomi Hideyoshi. This failure led to Goemon and his son being boiled alive in a large pot, transformed him into a folk hero, immortalized in Japanese culture from plays to video games.
 - Oda Nobunaga
@@ -147,6 +153,7 @@ Which stringed instrument is commonly associated with performances in traditiona
 - Shamisen
 	set global.music_tries = global.music_tries + 1
 	set global.answered_question_music = true
+	set global.answered_question_music_counter = true
 	Detective: I think that's the right answer.
 => END
 
@@ -159,16 +166,21 @@ What is the term for the Japanese writing system that consists of characters bor
 - Romaji
 	set global.file_tries = global.file_tries + 1
 	Detective: I don't think that's quite right
+	
 - Kanji
 	set global.file_tries = global.file_tries + 1
 	set global.answered_question_file = true
+	set global.answered_question_file_counter = true
 	Detective: I think that's the right answer
+	
 - Hachijō
 	set global.file_tries = global.file_tries + 1
 	Detective: I don't think that's quite right
+	
 - Kansai-ben
 	set global.file_tries = global.file_tries + 1
 	Detective: I don't think that's quite right
+	
 => END
 
 ~ over
