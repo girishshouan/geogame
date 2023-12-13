@@ -4,10 +4,16 @@ Alysanne: Konnichiwa. It seems you are in quite the pickle at the moment. Do you
 	Alysanne: Very well. I am aware of your predicament. As much as I'd like to help more, currently I will only be able to help you twice. So please choose what you need my help with wisely.\n
 	- Book shelf question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
-		if global.shelf_tries == 1:
-			Alysanne: The most popular Japanese manga is related to pirates.
-		if global.shelf_tries == 2:
-			Alysanne: The most popular Japanese manga is named after the biggest in-universe treasure.
+		if global.random_one ==1:
+			if global.shelf_tries == 1:
+				Alysanne: The most popular Japanese manga is related to pirates.
+			if global.shelf_tries == 2:
+				Alysanne: The most popular Japanese manga is named after the biggest in-universe treasure.
+		else:
+			if global.shelf_tries == 1:
+				Alysanne: This novel is set in Tokyo and explores the interconnected lives of its characters during the late-night hours.
+			if global.shelf_tries == 2:
+				Alysanne: The story unfolds during a single night and is known for its surreal and atmospheric elements.
 	- Picture question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
 		if global.picture_tries <= 3:
@@ -18,10 +24,17 @@ Alysanne: Konnichiwa. It seems you are in quite the pickle at the moment. Do you
 			Alysanne: Tokugawa Ieyasu (1543–1616) was a prominent Japanese shogun and the founder of the Tokugawa shogunate. Known for his political acumen, Ieyasu played a pivotal role in the unification of Japan.
 	- Green board question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
-		if global.board_tries == 1:
-			Alysanne: This city is the capital of Hokkaido, which is the northernmost prefecture in Japan.
-		if global.board_tries == 2:
-			Alysanne: The city shares it's name with a very popular Japanese beer brand.
+		if global.random_two == 1:
+			if global.board_tries == 1:
+				Alysanne: This city is the capital of Hokkaido, which is the northernmost prefecture in Japan.
+			if global.board_tries == 2:
+				Alysanne: The city shares it's name with a very popular Japanese beer brand.
+		else:
+			if global.board_tries == 1:
+				Alysanne: This iconic volcanic mountain is a popular subject in Japanese art and literature.
+			if global.board_tries == 2:
+				Alysanne: It is located on Honshu, near Tokyo, and is a UNESCO World Heritage Site.
+
 	- Gramophone question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
 		if global.music_tries == 1:
