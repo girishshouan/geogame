@@ -1,8 +1,6 @@
 extends Node
 
 var current_scene = 0
-var actionable_mutex = 0
-
 
 #level 1 vars
 var answered_question_shelf = false

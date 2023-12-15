@@ -25,6 +25,8 @@ func _process(_delta):
 		answered_all = false
 	
 	pb.value = timer.time_left
+	if pb.value == 0:
+		get_tree().quit()
 
 
 func pauseMenu():
