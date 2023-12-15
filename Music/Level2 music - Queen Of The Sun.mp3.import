@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jesdrx5kyktk"
+path="res://.godot/imported/Level2 music - Queen Of The Sun.mp3-fce6031dda18b1e6bd7ee8ae5b45046d.mp3str"
+
+[deps]
+
+source_file="res://Music/Level2 music - Queen Of The Sun.mp3"
+dest_files=["res://.godot/imported/Level2 music - Queen Of The Sun.mp3-fce6031dda18b1e6bd7ee8ae5b45046d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
