@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
 
-[ext_resource type="Script" path="res://endstory/balloon.gd" id="1_4u26j"]
+[ext_resource type="Script" path="res://beginjourney/balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://db6303j5qt6pp" path="res://fonts/Pixel12x10Mono.ttf" id="3_tp2sa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -64,43 +63,6 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
-[sub_resource type="Animation" id="Animation_qpw4c"]
-resource_name = "Press Space"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_2g0h5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtfpc"]
-_data = {
-"Press Space": SubResource("Animation_qpw4c"),
-"RESET": SubResource("Animation_2g0h5")
-}
-
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_4u26j")
@@ -112,7 +74,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 21.0
-offset_top = -431.0
+offset_top = -207.0
 offset_right = -19.0
 offset_bottom = -19.0
 grow_horizontal = 2
@@ -133,7 +95,7 @@ theme_override_constants/separation = 30
 
 [node name="Portrait" type="TextureRect" parent="Balloon/Dialogue/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Dialogue/HBoxContainer"]
@@ -143,7 +105,6 @@ size_flags_horizontal = 3
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Dialogue/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
-z_index = -1
 layout_mode = 2
 mouse_filter = 1
 bbcode_enabled = true
@@ -156,7 +117,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
-skip_pause_at_character_if_followed_by = null
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
@@ -165,10 +125,10 @@ anchor_left = 0.226
 anchor_top = 0.166
 anchor_right = 0.961
 anchor_bottom = 0.168
-offset_left = 239.44
-offset_top = -404.392
-offset_right = -1.16003
-offset_bottom = 272.784
+offset_left = -3.31201
+offset_top = -404.224
+offset_right = -0.63208
+offset_bottom = -0.552
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -183,40 +143,6 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Balloon"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 542.0
-offset_top = -43.0
-offset_right = 542.0
-offset_bottom = -43.0
-grow_vertical = 0
-
-[node name="Label" type="Label" parent="Balloon/NinePatchRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -14.0
-offset_right = 20.0
-offset_bottom = 14.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_tp2sa")
-theme_override_font_sizes/font_size = 24
-text = "Press Spacebar..."
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/NinePatchRect"]
-autoplay = "Press Space"
-libraries = {
-"": SubResource("AnimationLibrary_qtfpc")
-}
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

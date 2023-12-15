@@ -2,96 +2,51 @@
 if global.shelf_tries == 3:
 	set global.has_lost = true
 	=> over
-if global.random_one == 1:
-	Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
-	- Naruto
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-	- One Piece
-		Detective: The room just turned a bit brighter. I think that's the correct answer.
-		set global.answered_question_shelf = true
-		set global.answered_question_shelf_counter = true
-		=> END
-	- Attack on Titan
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-	- Inuyasha
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-	- Astro Boy
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-else:
-	Which literary work by Haruki Murakami features a protagonist who spends his nights reading classic literature in a Denny's?
-	- Norwegian Wood
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-	- 1Q84
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-	- Kafka on the Shore
-		Detective: I don't think that's quite right.
-		set global.shelf_tries = global.shelf_tries + 1
-		=> END
-	- After Dark
-		Detective: The room just turned a bit brighter. I think that's the correct answer.
-		set global.answered_question_shelf = true
-		set global.answered_question_shelf_counter = true
-		=> END
+Detective: This book shelf appears peculiar. It's full of popular manga, which are Japanese comic books. There's a question written on a card here. Which is the most popular manga?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
+- Naruto
+	Detective: I don't think that's quite right.
+	set global.shelf_tries = global.shelf_tries + 1
+	=> END
+- One Piece
+	Detective: The room just turned a bit brighter. I think that's the correct answer.
+	set global.answered_question_shelf = true
+	set global.answered_question_shelf_counter = true
+	=> END
+- Attack on Titan
+	Detective: I don't think that's quite right.
+	set global.shelf_tries = global.shelf_tries + 1
+	=> END
+- Inuyasha
+	Detective: I don't think that's quite right.
+	set global.shelf_tries = global.shelf_tries + 1
+	=> END
+- Astro Boy
+	Detective: I don't think that's quite right.
+	set global.shelf_tries = global.shelf_tries + 1
+	=> END
 
 ~ board
 if global.board_tries == 3:
 	set global.has_lost = true
 	=> over
-if global.two == 1:
-	Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
-	- Tokyo
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
-	- Akihabara
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
-	- Osaka
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
-	- Kyoto
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
-	- Sapporo
-		Detective: I think that's the correct answer.
-		set global.answered_question_board = true
-		set global.answered_question_board_counter = true
-		=> END
-	=> END
-else:
-	Which mountain, often considered a symbol of Japan, is the highest peak in the country?
-	- Mount Tateyama
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
-	- Mount Fuji
-		Detective: I think that's the correct answer.
-		set global.answered_question_board = true
-		set global.answered_question_board_counter = true
-		=> END
-	- Mount Aso
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
-	- Mount Haku
-		Detective: I don't think that's quite right.
-		set global.board_tries = global.board_tries + 1
-		=> END
+Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
+- Tokyo
+	Detective: I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
+- Akihabara
+	Detective: I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
+- Osaka
+	Detective: I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
+- Kyoto
+	Detective: I don't think that's quite right.
+	set global.board_tries = global.board_tries + 1
+- Sapporo
+	Detective: I think that's the correct answer.
+	set global.answered_question_board = true
+	set global.answered_question_board_counter = true
+=> END
 
 ~ locked
 Detective: The door is locked!
@@ -120,7 +75,6 @@ Ishikawa1: Who does this painting depict?\nAttempt number - {{global.picture_tri
 - Miyamoto Musashi
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right
-	=> END
 - Ishikawa Goemon
 	set global.answered_question_picture = true
 	set global.picture_tries = global.picture_tries + 1
@@ -128,112 +82,63 @@ Ishikawa1: Who does this painting depict?\nAttempt number - {{global.picture_tri
 	
 	Detective: This is the correct answer!
 	Ishikawa2: Ishikawa Goemon was a legendary ninja from 16th-century Japan, celebrated as a Robin Hood figure as he was damous for stealing from the rich to aid the poor. His most notable act was an unsuccessful attempt to assassinate the warlord Toyotomi Hideyoshi. This failure led to Goemon and his son being boiled alive in a large pot, transformed him into a folk hero, immortalized in Japanese culture from plays to video games.
-	=> END
 - Oda Nobunaga
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right
-	=> END
 - Tokugawa Ieyasu
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right.
-	=> END
 => END
 
 ~ ongaku
 if global.music_tries == 3:
 	set global.has_lost = true
 	=> over
-if global.random_three == 1:
-	The gramophone, which was made in the United States had an important role in Japanese culture, as it contributed to the preservation and dissemination of traditional Japanese music such as the Noh and Kabuki music.\n
-	Which stringed instrument is commonly associated with performances in traditional theater?
-	- Sitar
-		set global.music_tries = global.music_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Erhu
-		set global.music_tries = global.music_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Gayageum
-		set global.music_tries = global.music_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Shamisen
-		set global.music_tries = global.music_tries + 1
-		set global.answered_question_music = true
-		set global.answered_question_music_counter = true
-		Detective: I think that's the right answer.
-		=> END
-	=> END
-else:
-	Which Japanese pop music genre originated in the late 1970s and is characterized by its upbeat and catchy tunes?
-	- J-pop
-		set global.music_tries = global.music_tries + 1
-		set global.answered_question_music = true
-		set global.answered_question_music_counter = true
-		Detective: I think that's the right answer.
-		=> END
-	- Enka
-		set global.music_tries = global.music_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Kayokyoku
-		set global.music_tries = global.music_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Ciy Pop
-		set global.music_tries = global.music_tries + 1
-		Detective: I don't think that's quite right
-		=> END
+The gramophone, which was made in the United States had an important role in Japanese culture, as it contributed to the preservation and dissemination of traditional Japanese music such as the Noh and Kabuki music.\n
+Which stringed instrument is commonly associated with performances in traditional theater?
+- Sitar
+	set global.music_tries = global.music_tries + 1
+	Detective: I don't think that's quite right
+- Erhu
+	set global.music_tries = global.music_tries + 1
+	Detective: I don't think that's quite right
+- Gayageum
+	set global.music_tries = global.music_tries + 1
+	Detective: I don't think that's quite right
+- Shamisen
+	set global.music_tries = global.music_tries + 1
+	set global.answered_question_music = true
+	set global.answered_question_music_counter = true
+	Detective: I think that's the right answer.
+=> END
 
 ~ file
 if global.music_tries == 3:
 	set global.has_lost = true
 	=> over
 Detective: These documents seem to be written in Japanese.\n
-if global.random_five == 1:
-	What is the term for the Japanese writing system that consists of characters borrowed from Chinese, used alongside the writing scripts Hiragana and Katakana?
-	- Romaji
-		set global.file_tries = global.file_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Kanji
-		set global.file_tries = global.file_tries + 1
-		set global.answered_question_file = true
-		set global.answered_question_file_counter = true
-		Detective: I think that's the right answer
-		=> END
-	- Hachijō
-		set global.file_tries = global.file_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Kansai-ben
-		set global.file_tries = global.file_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-else:
-	What is the name of the Japanese writing system that uses characters derived from Chinese characters?
-	- Katakana
-		set global.file_tries = global.file_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Romaji
-		set global.file_tries = global.file_tries + 1
-		Detective: I don't think that's quite right
-		=> END
-	- Kanji
-		set global.file_tries = global.file_tries + 1
-		set global.answered_question_file = true
-		set global.answered_question_file_counter = true
-		Detective: I think that's the right answer
-		=> END
-	- Hiragana
-		set global.file_tries = global.file_tries + 1
-		Detective: I don't think that's quite right
-		=> END
+What is the term for the Japanese writing system that consists of characters borrowed from Chinese, used alongside the writing scripts Hiragana and Katakana?
+- Romaji
+	set global.file_tries = global.file_tries + 1
+	Detective: I don't think that's quite right
+	
+- Kanji
+	set global.file_tries = global.file_tries + 1
+	set global.answered_question_file = true
+	set global.answered_question_file_counter = true
+	Detective: I think that's the right answer
+	
+- Hachijō
+	set global.file_tries = global.file_tries + 1
+	Detective: I don't think that's quite right
+	
+- Kansai-ben
+	set global.file_tries = global.file_tries + 1
+	Detective: I don't think that's quite right
+	
 => END
 
 ~ over
 Detective: What's happening?
-Strange voice - You have lost.
+Oracle: You have lost.
 => END
