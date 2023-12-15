@@ -11,18 +11,6 @@ func _ready():
 	update_animation_parameters(starting_direction)
 
 func _physics_process(_delta):
-	'''
-	if Input.is_action_just_pressed("Interact") and global.actionable_mutex == 0:
-		global.actionable_mutex = 1
-		var actionables = actionable_finder.get_overlapping_areas()
-		if actionables.size() > 0:
-			actionables[0].action()
-			return
-		global.actionable_mutex = 0
-	'''
-		#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/test.dialogue"), "start")
-		#return
-	
 	#Get input direction
 	var input_direction = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"),
@@ -50,7 +38,7 @@ func update_animation_parameters(move_input : Vector2):
 	if(move_input != Vector2.ZERO):
 		animation_tree.set("parameters/Walk/blend_position", move_input)
 		animation_tree.set("parameters/Idle/blend_position", move_input)
-		
+
 
 func pick_new_state():
 	if(velocity != Vector2.ZERO):

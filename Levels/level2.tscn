@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dph1ssnh6uwtj"]
+[gd_scene load_steps=43 format=3 uid="uid://dph1ssnh6uwtj"]
 
 [ext_resource type="PackedScene" uid="uid://b2swceqeu2emd" path="res://Characters/detective.tscn" id="1_8luf3"]
 [ext_resource type="Script" path="res://Levels/level2.gd" id="1_vt2iw"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://da0mqmqatwp1k" path="res://actionable.tscn" id="13_xi7vr"]
 [ext_resource type="Resource" uid="uid://baqo4ypyt3foe" path="res://Dialogue/level2.dialogue" id="14_i0nqf"]
 [ext_resource type="Script" path="res://Levels/counterlevel2.gd" id="15_gkxys"]
+[ext_resource type="AudioStream" uid="uid://b4mkoqnhfrf3c" path="res://Music/_Salah_ - Traditional Egyptian Folk Song.mp3" id="18_xd1oi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yp6ag"]
 texture = ExtResource("2_rawdb")
@@ -4511,5 +4512,10 @@ offset_top = 384.0
 offset_right = -287.0
 offset_bottom = 415.0
 text = "Escape"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_xd1oi")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

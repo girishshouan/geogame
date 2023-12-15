@@ -18,6 +18,8 @@ func _process(_delta):
 		pauseMenu()
 	
 	pb.value = timer.time_left
+	if pb.value == 0:
+		get_tree().quit()
 
 
 func pauseMenu():

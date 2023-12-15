@@ -26,7 +26,7 @@ if global.random_one == 1:
 		set global.shelf_tries = global.shelf_tries + 1
 		=> END
 else:
-	Which literary work by Haruki Murakami features a protagonist who spends his nights reading classic literature in a Denny's?
+	Which literary work by Haruki Murakami features a protagonist who spends his nights reading classic literature in a Denny's?\nAttempt number - {{global.shelf_tries}}. Attempts allowed - 3
 	- Norwegian Wood
 		Detective: I don't think that's quite right.
 		set global.shelf_tries = global.shelf_tries + 1
@@ -50,7 +50,7 @@ if global.board_tries == 3:
 	set global.has_lost = true
 	=> over
 if global.two == 1:
-	Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?
+	Detective: There seems to be something drawn on the board. It's a map of Japan. All the important places are marked in the north except one. Which city is it?\nAttempt number - {{global.board_tries}}. Attempts allowed - 3
 	- Tokyo
 		Detective: I don't think that's quite right.
 		set global.board_tries = global.board_tries + 1
@@ -74,7 +74,7 @@ if global.two == 1:
 		=> END
 	=> END
 else:
-	Which mountain, often considered a symbol of Japan, is the highest peak in the country?
+	Which mountain, often considered a symbol of Japan, is the highest peak in the country?\nAttempt number - {{global.board_tries}}. Attempts allowed - 3
 	- Mount Tateyama
 		Detective: I don't think that's quite right.
 		set global.board_tries = global.board_tries + 1
@@ -145,7 +145,7 @@ if global.music_tries == 3:
 	=> over
 if global.random_three == 1:
 	The gramophone, which was made in the United States had an important role in Japanese culture, as it contributed to the preservation and dissemination of traditional Japanese music such as the Noh and Kabuki music.\n
-	Which stringed instrument is commonly associated with performances in traditional theater?
+	Which stringed instrument is commonly associated with performances in traditional theater?\nAttempt number - {{global.music_tries}}. Attempts allowed - 3
 	- Sitar
 		set global.music_tries = global.music_tries + 1
 		Detective: I don't think that's quite right
@@ -166,7 +166,7 @@ if global.random_three == 1:
 		=> END
 	=> END
 else:
-	Which Japanese pop music genre originated in the late 1970s and is characterized by its upbeat and catchy tunes?
+	Which Japanese pop music genre originated in the late 1970s and is characterized by its upbeat and catchy tunes?\nAttempt number - {{global.music_tries}}. Attempts allowed - 3
 	- J-pop
 		set global.music_tries = global.music_tries + 1
 		set global.answered_question_music = true
@@ -181,18 +181,18 @@ else:
 		set global.music_tries = global.music_tries + 1
 		Detective: I don't think that's quite right
 		=> END
-	- Ciy Pop
+	- City Pop
 		set global.music_tries = global.music_tries + 1
 		Detective: I don't think that's quite right
 		=> END
 
 ~ file
-if global.music_tries == 3:
+if global.file_tries == 3:
 	set global.has_lost = true
 	=> over
 Detective: These documents seem to be written in Japanese.\n
 if global.random_five == 1:
-	What is the term for the Japanese writing system that consists of characters borrowed from Chinese, used alongside the writing scripts Hiragana and Katakana?
+	What is the term for the Japanese writing system that consists of characters borrowed from Chinese, used alongside the writing scripts Hiragana and Katakana?\nAttempt number - {{global.file_tries}}. Attempts allowed - 3
 	- Romaji
 		set global.file_tries = global.file_tries + 1
 		Detective: I don't think that's quite right
@@ -212,7 +212,7 @@ if global.random_five == 1:
 		Detective: I don't think that's quite right
 		=> END
 else:
-	What is the name of the Japanese writing system that uses characters derived from Chinese characters?
+	What is the name of the Japanese writing system that uses characters derived from Chinese characters?\nAttempt number - {{global.file_tries}}. Attempts allowed - 3
 	- Katakana
 		set global.file_tries = global.file_tries + 1
 		Detective: I don't think that's quite right
@@ -235,5 +235,5 @@ else:
 
 ~ over
 Detective: What's happening?
-Strange voice - You have lost.
+Oracle: You have lost.
 => END

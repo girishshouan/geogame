@@ -15,7 +15,7 @@
 [ext_resource type="FontFile" uid="uid://db6303j5qt6pp" path="res://fonts/Pixel12x10Mono.ttf" id="11_kowhb"]
 [ext_resource type="PackedScene" uid="uid://xy0ri21vqeyy" path="res://Levels/TimerProgressBar.tscn" id="12_imnwo"]
 [ext_resource type="Script" path="res://Levels/counter.gd" id="13_jw1ij"]
-[ext_resource type="AudioStream" uid="uid://cs0n02cvvdswv" path="res://Music/RUDE_Eternal_Youth.mp3" id="14_847gj"]
+[ext_resource type="AudioStream" uid="uid://dwqc325y0lnkq" path="res://Music/Chi Dori_ 18th Century Kengyo Yoshizawa.mp3" id="16_fckgb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcv7v"]
 texture = ExtResource("2_bsdjk")
@@ -16013,7 +16013,7 @@ position = Vector2(3, -3)
 shape = SubResource("RectangleShape2D_nuggb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_847gj")
+stream = ExtResource("16_fckgb")
 volume_db = -15.0
 autoplay = true
 
