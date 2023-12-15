@@ -120,7 +120,6 @@ Ishikawa1: Who does this painting depict?\nAttempt number - {{global.picture_tri
 - Miyamoto Musashi
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right
-	=> END
 - Ishikawa Goemon
 	set global.answered_question_picture = true
 	set global.picture_tries = global.picture_tries + 1
@@ -128,15 +127,12 @@ Ishikawa1: Who does this painting depict?\nAttempt number - {{global.picture_tri
 	
 	Detective: This is the correct answer!
 	Ishikawa2: Ishikawa Goemon was a legendary ninja from 16th-century Japan, celebrated as a Robin Hood figure as he was damous for stealing from the rich to aid the poor. His most notable act was an unsuccessful attempt to assassinate the warlord Toyotomi Hideyoshi. This failure led to Goemon and his son being boiled alive in a large pot, transformed him into a folk hero, immortalized in Japanese culture from plays to video games.
-	=> END
 - Oda Nobunaga
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right
-	=> END
 - Tokugawa Ieyasu
 	set global.picture_tries = global.picture_tries + 1
 	Detective: I don't think that's quite right.
-	=> END
 => END
 
 ~ ongaku

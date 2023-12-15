@@ -22,7 +22,7 @@ global="*res://global.gd"
 
 [dialogue_manager]
 
-general/balloon_path="res://endstory/balloon.tscn"
+general/balloon_path="res://beginjourney/balloon.tscn"
 general/custom_test_scene_path="res://testdialogue.tscn"
 general/states=["global"]
 

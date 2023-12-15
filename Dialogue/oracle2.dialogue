@@ -1,73 +1,73 @@
 ~ oracle_dialogue_start
-Alysanne: I'm eager to help, as always. Do you require any assistance?
+Oracle: I'm eager to help, as always. Do you require any assistance?
 - Yes
-	Alysanne: Very well. I am aware of your predicament. As much as I'd like to help more, currently I will only be able to help you twice. So please choose what you need my help with wisely.\n
+	Oracle: Very well. I am aware of your predicament. As much as I'd like to help more, currently I will only be able to help you twice. So please choose what you need my help with wisely.\n
 	- Strange statue question
 		if global.random_one == 2:
 			set global.oracle_help_taken_l2 = global.oracle_help_taken_l2 + 1
 			if global.sphinx_tries == 1:
-				Alysanne: Anubis is a jackal-headed deity associated with mummification and the afterlife. He is considered the guardian of the necropolis and the god of embalming.\n
-				Alysanne: Bennu is often depicted as a heron or crane-like bird with a long neck and a solar disk on its head. It is linked to the concept of renewal and regeneration, symbolizing the sun's daily rebirth.
+				Oracle: Anubis is a jackal-headed deity associated with mummification and the afterlife. He is considered the guardian of the necropolis and the god of embalming.\n
+				Oracle: Bennu is often depicted as a heron or crane-like bird with a long neck and a solar disk on its head. It is linked to the concept of renewal and regeneration, symbolizing the sun's daily rebirth.
 			if global.sphinx_tries == 2:
-				Alysanne: Sekhmet is a lioness-headed goddess associated with war, healing, and protection. She is often depicted with the head of a lioness and a solar disk on her crown.\n
-				Alysanne: Anubis is a jackal-headed deity associated with mummification and the afterlife. He is considered the guardian of the necropolis and the god of embalming.
+				Oracle: Sekhmet is a lioness-headed goddess associated with war, healing, and protection. She is often depicted with the head of a lioness and a solar disk on her crown.\n
+				Oracle: Anubis is a jackal-headed deity associated with mummification and the afterlife. He is considered the guardian of the necropolis and the god of embalming.
 		else:
-			Alysanne: I'm afraid I am unable to help you with that question.
+			Oracle: I'm afraid I am unable to help you with that question.
 	- Rocks question
 		set global.oracle_help_taken_l2 = global.oracle_help_taken_l2 + 1
 		if global.random_two == 2:
 			if global.debris_tries == 1:
-				Alysanne: The Pyrgi Tablets are gold sheets inscribed with Etruscan and Phoenician texts, discovered in the sanctuary of Pyrgi (modern-day Santa Severa) near Rome. The Etruscans were an ancient civilization that thrived in central Italy.\n
-				Alysanne: The Behistun Inscription is a multilingual inscription carved on a cliffside in Iran by King Darius I of Persia around 520 BCE. The inscription recounts Darius's victories and establishes him as the legitimate king after suppressing a rebellion.
+				Oracle: The Pyrgi Tablets are gold sheets inscribed with Etruscan and Phoenician texts, discovered in the sanctuary of Pyrgi (modern-day Santa Severa) near Rome. The Etruscans were an ancient civilization that thrived in central Italy.\n
+				Oracle: The Behistun Inscription is a multilingual inscription carved on a cliffside in Iran by King Darius I of Persia around 520 BCE. The inscription recounts Darius's victories and establishes him as the legitimate king after suppressing a rebellion.
 			if global.debris_tries == 2:
-				Alysanne: The Hammurabi Code is one of the earliest and most complete written legal codes, dating back to around 1754 BCE. It consists of a set of laws carved onto a stele (a large stone pillar) by the Babylonian king Hammurabi.\n
-				Alysanne: The Behistun Inscription is a multilingual inscription carved on a cliffside in Iran by King Darius I of Persia around 520 BCE. The inscription recounts Darius's victories and establishes him as the legitimate king after suppressing a rebellion.
+				Oracle: The Hammurabi Code is one of the earliest and most complete written legal codes, dating back to around 1754 BCE. It consists of a set of laws carved onto a stele (a large stone pillar) by the Babylonian king Hammurabi.\n
+				Oracle: The Behistun Inscription is a multilingual inscription carved on a cliffside in Iran by King Darius I of Persia around 520 BCE. The inscription recounts Darius's victories and establishes him as the legitimate king after suppressing a rebellion.
 		else:
 			if global.debris_tries == 1:
-				Alysanne: This creature, featured in King Tut's belongings, was often represented in ancient Egyptian jewelry and amulets due to its symbolism of regeneration and protection.
+				Oracle: This creature, featured in King Tut's belongings, was often represented in ancient Egyptian jewelry and amulets due to its symbolism of regeneration and protection.
 			if global.debris_tries == 2:
-				Alysanne: The ancient Egyptians associated this animal with the sun god Ra and believed in its power to bring about transformation and good fortune.
+				Oracle: The ancient Egyptians associated this animal with the sun god Ra and believed in its power to bring about transformation and good fortune.
 	- Grass question
 		set global.oracle_help_taken_l2 = global.oracle_help_taken_l2 + 1
 		if global.random_three == 1:
 			if global.oasis_tries == 1:
-				Alysanne: Dakhla Oasis has a rich history dating back to ancient times. It was a significant settlement during the Pharaonic period and later became a center for Christian monasticism.\n
-				Alysanne: Kharga Oasis is the largest of the oases in Egypt and is strategically located on the southern part of the western desert. It's home to several significant archaeological sites, including the Temple of Hibis.
+				Oracle: Dakhla Oasis has a rich history dating back to ancient times. It was a significant settlement during the Pharaonic period and later became a center for Christian monasticism.\n
+				Oracle: Kharga Oasis is the largest of the oases in Egypt and is strategically located on the southern part of the western desert. It's home to several significant archaeological sites, including the Temple of Hibis.
 			else:
-				Alysanne: The river in question is not only associated with the formation of Egypt's oases but is also often referred to as the lifeblood of Egypt due to its crucial role in the country's civilization.
+				Oracle: The river in question is not only associated with the formation of Egypt's oases but is also often referred to as the lifeblood of Egypt due to its crucial role in the country's civilization.
 	- Sand dune question
 		set global.oracle_help_taken_l2 = global.oracle_help_taken_l2 + 1
 		if global.random_five == 1:
 			if global.tomb_tries == 1:
-				Alysanne: Cleopatra VII, the last active pharaoh of ancient Egypt, is famous for her political astuteness and relationships with powerful Roman leaders, including Julius Caesar and Mark Antony. Cleopatra's tomb has been one of the most sought-after archaeological discoveries, but to date, it has eluded researchers.\n
-				Alysanne: Ramses II, also known as Ramses the Great, was buried in the Valley of the Kings. His mummy was discovered in 1881 by Gaston Maspero, the head of the Egyptian Antiquities Service.
+				Oracle: Cleopatra VII, the last active pharaoh of ancient Egypt, is famous for her political astuteness and relationships with powerful Roman leaders, including Julius Caesar and Mark Antony. Cleopatra's tomb has been one of the most sought-after archaeological discoveries, but to date, it has eluded researchers.\n
+				Oracle: Ramses II, also known as Ramses the Great, was buried in the Valley of the Kings. His mummy was discovered in 1881 by Gaston Maspero, the head of the Egyptian Antiquities Service.
 			 if global.tomb_tries == 2:
-				Alysanne: Cleopatra VII, the last active pharaoh of ancient Egypt, is famous for her political astuteness and relationships with powerful Roman leaders, including Julius Caesar and Mark Antony. Cleopatra's tomb has been one of the most sought-after archaeological discoveries, but to date, it has eluded researchers.\n
-				Alysanne: Akhenaten, also known as Amenhotep IV, is famous for his radical religious reforms. He introduced the worship of the sun disk, Aten, as the sole deity, rejecting the traditional pantheon of gods. The Royal Tomb of Akhenaten, located in the Royal Wadi at Amarna, is the burial place of the Eighteenth Dynasty pharaoh Akhenaten. It was excavated by the Italian Egyptologist Alessandro Barsanti.
+				Oracle: Cleopatra VII, the last active pharaoh of ancient Egypt, is famous for her political astuteness and relationships with powerful Roman leaders, including Julius Caesar and Mark Antony. Cleopatra's tomb has been one of the most sought-after archaeological discoveries, but to date, it has eluded researchers.\n
+				Oracle: Akhenaten, also known as Amenhotep IV, is famous for his radical religious reforms. He introduced the worship of the sun disk, Aten, as the sole deity, rejecting the traditional pantheon of gods. The Royal Tomb of Akhenaten, located in the Royal Wadi at Amarna, is the burial place of the Eighteenth Dynasty pharaoh Akhenaten. It was excavated by the Italian Egyptologist Alessandro Barsanti.
 		else:
 			if global.tomb_tries == 1:
-				Alysanne: Known for her beauty and depicted in various art forms, this queen's tomb is renowned for its elaborate wall paintings.
+				Oracle: Known for her beauty and depicted in various art forms, this queen's tomb is renowned for its elaborate wall paintings.
 			if global.tomb_tries == 2:
-				Alysanne: This queen was the principal wife of a pharaoh who reigned during the 19th dynasty.
+				Oracle: This queen was the principal wife of a pharaoh who reigned during the 19th dynasty.
 	- Pyramid question
 		if global.answered_question_sphinx and global.answered_question_debris and global.answered_question_oasis and answered_question_tomb:
 			set global.oracle_help_taken_l2 = global.oracle_help_taken_l2 + 1
 			if global.random_four == 1:
 				if global.pyramid_tries == 1:
-					Alysanne: The Karnak Temple Complex, located in Luxor, is one of the largest temple complexes in the world. It was dedicated to the worship of the god Amun, the chief deity of the Theban Triad. Karnak served as a religious center for over 2,000 years, and successive pharaohs added to its structures, creating a vast complex of temples, obelisks, and statues.\n
-					Alysanne: The Valley of the Kings, situated on the west bank of the Nile near Luxor, served as the royal burial ground for pharaohs of the New Kingdom. Pharaohs and high-ranking officials were buried in elaborate tombs cut into the rock of the valley.
+					Oracle: The Karnak Temple Complex, located in Luxor, is one of the largest temple complexes in the world. It was dedicated to the worship of the god Amun, the chief deity of the Theban Triad. Karnak served as a religious center for over 2,000 years, and successive pharaohs added to its structures, creating a vast complex of temples, obelisks, and statues.\n
+					Oracle: The Valley of the Kings, situated on the west bank of the Nile near Luxor, served as the royal burial ground for pharaohs of the New Kingdom. Pharaohs and high-ranking officials were buried in elaborate tombs cut into the rock of the valley.
 				if global.pyramid_tries == 2:
-					Alysanne: The Karnak Temple Complex, located in Luxor, is one of the largest temple complexes in the world. It was dedicated to the worship of the god Amun, the chief deity of the Theban Triad. Karnak served as a religious center for over 2,000 years, and successive pharaohs added to its structures, creating a vast complex of temples, obelisks, and statues.\n
-					Alysanne: Luxor Temple, located on the east bank of the Nile in Luxor, served as a religious center dedicated to the rejuvenation of kingship and the worship of the Theban Triad—Amun, Mut, and Khonsu.
+					Oracle: The Karnak Temple Complex, located in Luxor, is one of the largest temple complexes in the world. It was dedicated to the worship of the god Amun, the chief deity of the Theban Triad. Karnak served as a religious center for over 2,000 years, and successive pharaohs added to its structures, creating a vast complex of temples, obelisks, and statues.\n
+					Oracle: Luxor Temple, located on the east bank of the Nile in Luxor, served as a religious center dedicated to the rejuvenation of kingship and the worship of the Theban Triad—Amun, Mut, and Khonsu.
 			else:
 				if global.pyramid_tries == 2:
-					Alysanne: The architects of the pyramids are thought to have had a keen understanding of aesthetic proportions, and this concept is often found in nature and art.
+					Oracle: The architects of the pyramids are thought to have had a keen understanding of aesthetic proportions, and this concept is often found in nature and art.
 				if global.pyramid_tries == 1:
-					Alysanne: It is denoted by the Greek letter "phi."
+					Oracle: It is denoted by the Greek letter "phi."
 - No
-	Alysanne: Godspeed.
+	Oracle: Godspeed.
 => END
 
 ~ oracle_capacity_reached
-Alysanne: Unfortunately I am not able to help you anymore. I wish you good fortune in the challenges to come.
+Oracle: Unfortunately I am not able to help you anymore. I wish you good fortune in the challenges to come.
 => END

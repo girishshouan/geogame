@@ -5,6 +5,7 @@ extends Node2D
 @onready var pb = get_node("Camera2D/ProgressBar")
 
 var paused = false
+var answered_all = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +17,12 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("Pause"):
 		pauseMenu()
+	
+	if global.answered_question_sphinx and global.answered_question_debris and global.answered_question_oasis and global.answered_question_tomb and global.answered_question_pyramid and answered_all:
+		var balloon = load("res://endstory/balloon.tscn").instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load("res://Dialogue/levelcomplete.dialogue"), "level1")
+		answered_all = false
 	
 	pb.value = timer.time_left
 	if pb.value == 0:
