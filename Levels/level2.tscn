@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://da0mqmqatwp1k" path="res://actionable.tscn" id="13_xi7vr"]
 [ext_resource type="Resource" uid="uid://baqo4ypyt3foe" path="res://Dialogue/level2.dialogue" id="14_i0nqf"]
 [ext_resource type="Script" path="res://Levels/counterlevel2.gd" id="15_gkxys"]
-[ext_resource type="AudioStream" uid="uid://b4mkoqnhfrf3c" path="res://Music/_Salah_ - Traditional Egyptian Folk Song.mp3" id="18_xd1oi"]
+[ext_resource type="AudioStream" uid="uid://jesdrx5kyktk" path="res://Music/Level2 music - Queen Of The Sun.mp3" id="18_e1ngk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yp6ag"]
 texture = ExtResource("2_rawdb")
@@ -4338,6 +4338,7 @@ script = ExtResource("1_vt2iw")
 
 [node name="detective" parent="." instance=ExtResource("1_8luf3")]
 position = Vector2(-319, 340)
+movement_speed = 150.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="detective"]
 remote_path = NodePath("../../Camera2D")
@@ -4514,7 +4515,7 @@ offset_bottom = 415.0
 text = "Escape"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_xd1oi")
+stream = ExtResource("18_e1ngk")
 volume_db = -15.0
 autoplay = true
 
