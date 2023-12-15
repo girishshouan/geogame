@@ -14,3 +14,24 @@ Detective:  Your journey ends here, Phantom. You'll answer for your crimes, and 
 endstory3: As authorities arrive to secure The Phantom, the detective looks around at the ancient chamber, pondering the intertwining paths of history, ambition, and justice.
 
 => END
+
+
+~ start
+Nathan: Hi Cat.
+if apple_status == "has":
+	Cat: I have an apple.
+	- Give to Nathan
+		set apple_status = "gave"
+		Cat: Here you go
+		Nathan: Thanks
+	- Keep it
+		Cat: But its mine
+		Nathan: Fair enough 
+elif apple_status == "gave":
+	Nathan: Thanks again for the apple
+else:
+	Nathan: I sure wish I had an apple, theres one over there
+=> END
+
+
+

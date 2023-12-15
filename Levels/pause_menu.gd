@@ -14,4 +14,10 @@ func _on_quit_pressed():
 
 
 func _on_oracle_pressed():
-	get_tree().change_scene_to_file("res://Levels/oracle_scene.tscn")
+	#get_tree().change_scene_to_file("res://Levels/oracle_scene.tscn")
+	var balloon = load("res://endstory/balloon.tscn").instantiate()
+	get_tree().current_scene.add_child(balloon)
+	if global.current_scene == 1:
+		balloon.start(load("res://Dialogue/oracle.dialogue"), "oracle_dialogue_start")
+	elif global.current_scene == 2:
+		balloon.start(load("res://Dialogue/oracle2.dialogue"), "oracle_dialogue_start")

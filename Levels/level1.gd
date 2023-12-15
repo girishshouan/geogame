@@ -10,7 +10,9 @@ var counter = 0
 
 func _ready():
 	global.current_scene = 1
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/begincontext.dialogue"), "start")
+	var balloon = load("res://beginjourney/balloon.tscn").instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(load("res://Dialogue/begincontext.dialogue"), "start")
 
 
 # for escape button
