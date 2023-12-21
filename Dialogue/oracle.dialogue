@@ -14,14 +14,15 @@ Oracle: Konnichiwa. It seems you are in quite the pickle at the moment. Do you r
 				Oracle: This novel is set in Tokyo and explores the interconnected lives of its characters during the late-night hours.
 			if global.shelf_tries == 2:
 				Oracle: The story unfolds during a single night and is known for its surreal and atmospheric elements.
+		=> END
 	- Picture question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
 		if global.picture_tries <= 3:
-			set global.view_picture = true
 			Oracle: Miyamoto Musashi was a legendary Japanese swordsman and philosopher, known for his exceptional skill in martial arts and his strategic prowess.  Musashi's life was marked by a series of duels and a commitment to self-improvement, reflecting a unique blend of martial expertise and profound wisdom.
 			Oracle: Oda Nobunaga (1534–1582) was a powerful and ambitious daimyo during Japan's Sengoku period. Known for his ruthlessness and strategic brilliance, he played a key role in unifying Japan. Nobunaga employed innovative military tactics and embraced firearms, marking a departure from traditional warfare.
 		if global.picture_tries == 2:
 			Oracle: Tokugawa Ieyasu (1543–1616) was a prominent Japanese shogun and the founder of the Tokugawa shogunate. Known for his political acumen, Ieyasu played a pivotal role in the unification of Japan.
+		=> END
 	- Green board question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
 		if global.random_two == 1:
@@ -34,6 +35,7 @@ Oracle: Konnichiwa. It seems you are in quite the pickle at the moment. Do you r
 				Oracle: This iconic volcanic mountain is a popular subject in Japanese art and literature.
 			if global.board_tries == 2:
 				Oracle: It is located on Honshu, near Tokyo, and is a UNESCO World Heritage Site.
+		=> END
 	- Gramophone question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
 		if global.random_three == 1:
@@ -47,6 +49,7 @@ Oracle: Konnichiwa. It seems you are in quite the pickle at the moment. Do you r
 				Oracle: This genre often incorporates elements of Western pop and rock music.
 			if global.music_tries == 2:
 				Oracle: It has gained popularity not only in Japan but also internationally.\n
+		=> END
 	- Filing cabinet question
 		set global.oracle_help_taken = global.oracle_help_taken + 1
 		if global.random_five == 1:
@@ -60,6 +63,7 @@ Oracle: Konnichiwa. It seems you are in quite the pickle at the moment. Do you r
 				Oracle: These characters represent logographic and syllabic scripts.
 			if global.file_tries == 2:
 				Oracle: They are often used for nouns, verb stems, and adjectives in Japanese writing.
+		=> END
 - No
 	Oracle: Godspeed.
 => END

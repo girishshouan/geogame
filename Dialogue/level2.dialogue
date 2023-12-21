@@ -124,7 +124,7 @@ if global.random_two == 2:
 		=> END
 	- The Rosetta Stone
 		Detective: The room just turned a bit brighter. I think that's the correct answer.
-		The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
+		The Rosetta Stone is a granodiorite stele inscribed with the same text written in three scripts - Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
 		set global.answered_question_debris = true
 		set global.answered_question_debris_counter = true
 		=> END
@@ -141,7 +141,6 @@ else:
 		=> END
 	- Scarab Beetle
 		Detective: The room just turned a bit brighter. I think that's the correct answer.
-		The Rosetta Stone is a granodiorite stele inscribed with a decree issued at Memphis in 196 BCE. It contains the same text written in three scripts: Ancient Greek, Demotic (Egyptian script), and hieroglyphics. The trilingual inscription allowed scholars, to unlock the mysteries of Egyptian writing, greatly advancing the understanding of ancient Egyptian history and culture.
 		set global.answered_question_debris = true
 		set global.answered_question_debris_counter = true
 		=> END
