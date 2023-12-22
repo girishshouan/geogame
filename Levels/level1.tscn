@@ -15873,15 +15873,6 @@ layer_1/tile_data = PackedInt32Array(-65537, 458752, 2, -1, 458752, 2, 65535, 45
 position = Vector2(147, 16)
 
 [node name="PauseMenu" parent="Camera2D" instance=ExtResource("8_4ti5r")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -64.0
-offset_top = -80.0
-offset_right = 10.0
-offset_bottom = -11.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="Node for country name" type="Node2D" parent="Camera2D"]
 position = Vector2(-147, -16)
