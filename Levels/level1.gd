@@ -8,11 +8,19 @@ var answered_all = true
 var scene_stack = []
 var counter = 0
 
+func generate_questions() -> void:
+	global.random_one = randi_range(1,2)
+	global.random_two = randi_range(1,2)
+	global.random_three = randi_range(1,2)
+	global.random_four = randi_range(1,2)
+	global.random_five = randi_range(1,2)
+
 func _ready():
 	global.current_scene = 1
 	var balloon = load("res://beginjourney/balloon.tscn").instantiate()
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(load("res://Dialogue/begincontext.dialogue"), "start")
+	generate_questions()
 
 
 # for escape button
