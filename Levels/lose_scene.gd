@@ -6,8 +6,6 @@ func _ready():
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(load("res://Dialogue/losestory.dialogue"), "losestory")
 	
-	
-	
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
