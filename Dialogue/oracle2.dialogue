@@ -33,8 +33,8 @@ Oracle: I'm eager to help, as always. Do you require any assistance?
 			if global.oasis_tries == 1:
 				Oracle: Dakhla Oasis has a rich history dating back to ancient times. It was a significant settlement during the Pharaonic period and later became a center for Christian monasticism.\n
 				Oracle: Kharga Oasis is the largest of the oases in Egypt and is strategically located on the southern part of the western desert. It's home to several significant archaeological sites, including the Temple of Hibis.
-			else:
-				Oracle: The river in question is not only associated with the formation of Egypt's oases but is also often referred to as the lifeblood of Egypt due to its crucial role in the country's civilization.
+		else:
+			Oracle: The river in question is not only associated with the formation of Egypt's oases but is also often referred to as the lifeblood of Egypt due to its crucial role in the country's civilization.
 	- Sand dune question
 		set global.oracle_help_taken_l2 = global.oracle_help_taken_l2 + 1
 		if global.random_five == 1:
